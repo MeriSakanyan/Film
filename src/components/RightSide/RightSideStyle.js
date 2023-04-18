@@ -1,13 +1,9 @@
 import styled from "styled-components";
 
 export default styled.div`
-    
         display: flex;
+        flex-direction: row;
         align-items: center;
-    
-    .random, .mode {
-        color: white;
-        font-size: 10px;
-        margin-left: 20px;
-    }
+        justify-content: space-between;
+        flex: 1 1 150px;
 `

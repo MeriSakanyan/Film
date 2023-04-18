@@ -1,19 +1,25 @@
 import styled from "styled-components";
-
+   
 export default styled.div`
     .ant-select {
+        .ant-select-selection-item {
             background-color: #1b1e20;
-    .ant-select-arrow {
+            margin-top: 5px;
             color: white;
-            font-size: 6px;
-            right: 40%;
+        }
+
+    .ant-select-arrow {
+        color: white;
+        font-size: 8px;
+        margin-top: 1px;
     }
     }
+
     .ant-select-single:not(.ant-select-customize-input) .ant-select-selector  {
        background-color: #1b1e20;
        border: none;
-       font-size: 8px;
+       font-size: 15px;
        color: white;
     }
-
+    
 `

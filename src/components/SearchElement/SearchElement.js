@@ -9,7 +9,7 @@ function SearchElement() {
   return (
     <Styles>
         <Input  placeholder="search" type='text'/>
-        <Button type="search">Search</Button>
+        <Button size='small' type="search" >Search</Button>
     </Styles>
   )
 }

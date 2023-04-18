@@ -10,7 +10,9 @@ const onChange = (checked) => {
 function SwitchMode() {
   return (
     <Styles>
-      <Switch defaultChecked onChange={onChange} />
+      <div className='random'><h3>Random</h3></div>
+      <Switch size='small' defaultChecked onChange={onChange} />
+      <div className='mode'><h3>Night mode</h3></div>
     </Styles>
   )
 }
