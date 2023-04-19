@@ -4,8 +4,6 @@ export default styled.div`
 display: flex;
 .ant-switch {
         background-color: rgb(254, 121, 0);
-      
-        
         display: flex;
         margin-top: 2px;
         display: flex;
