@@ -1,5 +1,7 @@
 {
-    "searchButton": "Search",
-    "random": "Random",
-    "mode": "NightMode"
+    "header":{
+        "searchButton": "Search",
+        "random": "Random",
+        "mode": "NightMode"
+     }
 }

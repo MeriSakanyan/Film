@@ -1,5 +1,8 @@
 {
-    "searchButton": "Поиск",
-    "random": "Случайны",
-    "mode": "Ночной режим"
+    "header":{
+        "searchButton": "Поиск",
+        "random": "Случайны",
+        "mode": "Ночной режим"
+     }
+    
 }

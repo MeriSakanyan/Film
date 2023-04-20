@@ -9,11 +9,7 @@ i18n
 .use(HttpApi)
 .init({
   supportedLngs: ['en', 'ru'],
-  fallbacking: "en",
   lng: "en",
-  backend: {
-    LoadPath: '/locales/{{ing}}/translation.json',
-  },
 })
 
 export default i18n
