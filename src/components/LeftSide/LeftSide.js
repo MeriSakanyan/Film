@@ -1,23 +1,22 @@
-import React from 'react'
-// import styled from 'styled-components'
+import React, { useState } from 'react'
 import SelectLanguage from '../SelectLanguage/SelectLanguage'
 import Styles from './LeftSideStyle'
 import Logo from '../Logo/Logo'
-
-// const Logo = styled.img.attrs(({src}) => ({
-//     src: 'https://ifilm-f71a6.web.app/images/ifilm-dark-mode.png',
-//     alt: 'Image'
-// }))`
-//    width: 50px;
-//    height: 20px;
-//    margin-top: 5px;
-// `
+import Hamburger from 'hamburger-react'
 
 function LeftSide() {
+  const [isOpen, setOpen] = useState(false)
   return (
     <Styles>
-    <Logo />
-    <SelectLanguage />
+         <Logo /><SelectLanguage/>
+         {/*<SelectLanguage />
+          <Hamburger onToggle={toggled => {
+          if (toggled) {
+             console.log("open menu")
+          } else {
+             console.log("close menu")
+          }
+        }} />  */}
     </Styles>
   )
 }

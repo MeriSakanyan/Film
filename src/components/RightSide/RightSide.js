@@ -1,9 +1,7 @@
 import React from 'react'
-import SwitchMode from '../SwitchMode/SwitchMode'
 import Styles from './RightSideStyle'
 import SearchElement from '../SearchElement/SearchElement'
-
-
+import SwitchMode from '../SwitchMode/SwitchMode'
 
 function RightSide() {
   return (
@@ -11,8 +9,6 @@ function RightSide() {
       <SearchElement />
       <SwitchMode />   
      </Styles>
-    
-  
   )
 }
 
