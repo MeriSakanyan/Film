@@ -83,13 +83,12 @@ span {
         border-radius: 50px;
         width: 13px;
         height: 13px;
-    
     }
     
     
 }
 .random, .mode {
-    border: 1px solid #1b1e20;
+    
     margin-bottom: 10%;
     font-size: 18px;
     color: white;
@@ -102,7 +101,7 @@ span {
 
 .hamburger-react {
           color: rgb(254, 121, 0);
-          right: 13%;
+          
 }
 
 @media (max-Width:991px){

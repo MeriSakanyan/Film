@@ -3,8 +3,6 @@
 
 * {
   box-sizing: border-box;
-  background-color: #1b1e20;
-  /* background-color: white; */
 }
 
 :root {
@@ -15,7 +13,8 @@
   --wf-light: 300;
   --fw-normal: 600;
   --fw-bold: 800;
-
+  --blue: #1b1e20;
+  --white: rgb(236, 236, 236);
   /* Other */
   --radii: 0.5rem
 }
@@ -24,18 +23,16 @@ body {
   margin: 0;
 }
 
-body[data-theme='dark'] {
+body.dark {
   --colors-text: white;
-  --colors-bg: black;
-  --colors-ui-base: black;
-
+  --colors-bg: #1b1e20;
+  --colors-ui-base: #1b1e20;
   --shadow: rgb(90, 81, 81);
 }
-body[data-theme='light'] {
-  --colors-text: black;
+body.light {
+  --colors-text: #1b1e20;
   --colors-bg: white;
   --colors-ui-base: white;
-
   --shadow: rgb(90, 81, 81);
 }
 
