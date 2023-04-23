@@ -14,14 +14,14 @@ export default styled.div`
         .ant-input[type="text"] {
         margin-top: 7px;
         padding: 0.5em;
-        border: 0.1px solid white; 
+        border: 0.1px solid ${(props) => props.theme.colors.InputBorderColor}; 
         border-radius: 20px;
         font-family: inherit;
         font-size: 10px;
         height: 34px;
         outline: 0;
         width: 201px;
-        background-color: ${(props) => props.theme.colors.bgcolor};
+        background-color: ${(props) => props.theme.colors.inputBgColor};
         color: white;
         user-select: none;
         transition: border-color 0.3s;
@@ -33,8 +33,8 @@ export default styled.div`
 }
 
 .ant-input::placeholder {
-       font-size:13px;
-       color: white;
+       font-size:15px;
+       color: ${(props) => props.theme.colors.InputTextColor};
 }
 
 .ant-btn {
@@ -65,21 +65,16 @@ span {
 }
 
 .ant-switch {
-        background-color: rgb(254, 121, 0);    
         display: flex;
         margin-top: 2px;
         align-items: center;
         margin-top: 18px;
         margin-right: 20px;
-        .css-dev-only-do-not-override-htwhyh .ant-select-single {
-            color: red;
-        }
     .ant-switch-inner {
-        background-color: rgb(254, 121, 0);
+        background-color: ${(props) => props.theme.colors.switchColor};  
         
     }
     .ant-switch-handle {
-        background-color: rgb(254, 121, 0);
         border-radius: 50px;
         width: 13px;
         height: 13px;
@@ -91,7 +86,7 @@ span {
     
     margin-bottom: 10%;
     font-size: 18px;
-    color: white;
+    color: ${(props) => props.theme.colors.textColor};
     margin-top: 28px;
 }
 .random {

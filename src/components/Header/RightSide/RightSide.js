@@ -9,7 +9,7 @@ function RightSide({toggleTheme, isDarkThem}) {
 
   const [isOpen, setOpen] = useState(false)
   const { t } = useTranslation()
-  const [isToggled, setIsToggled]=useState(isDarkThem);
+  const [isToggled, setIsToggled] = useState(isDarkThem);
 
   const onToggle =()=>{
     setIsToggled(!isToggled);

@@ -23,8 +23,9 @@ function LeftSide({isDarkThem}) {
 
   const StyledMenu = styled.div`
   .ant-select-item-option-content {
-    color: white;
+    color: black;
   }
+  
 `;
   return (
     <Styles>

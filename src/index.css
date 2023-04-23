@@ -1,9 +1,10 @@
 /* @import-normalize;
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
-
+import 
 * {
   box-sizing: border-box;
   margin: 0;
+  background-color: ${(props) => props.theme.colors.bgcolor};
 }
 
 :root {
@@ -25,4 +26,6 @@ body {
   color: var(--colors-text);
   font-weight: var(--wf-light);
   background-color: var(--colors-bg);
-} */
+  
+}
+ */
