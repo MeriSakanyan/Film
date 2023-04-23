@@ -4,14 +4,17 @@ import { Input, Switch, Button } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { Turn  as Hamburger } from 'hamburger-react'
 
-const onChange = (checked) => {
-  console.log(`switch to ${checked}`);
-};
 
-function RightSide() {
+function RightSide({toggleTheme, isDarkThem}) {
 
   const [isOpen, setOpen] = useState(false)
   const { t } = useTranslation()
+  const [isToggled, setIsToggled]=useState(isDarkThem);
+
+  const onToggle =()=>{
+    setIsToggled(!isToggled);
+    toggleTheme();
+  }
   
   return (
      <Styles>
@@ -26,7 +29,7 @@ function RightSide() {
             <span>{t("header.random")}</span>
           </div>
           <div className='switch hamburgerelements'>
-          <Switch size='small' defaultChecked onChange={onChange} /> 
+          <Switch size='small' checked={isToggled} onChange={onToggle} /> 
             <span className='mode'>{t("header.mode")}</span>
           </div>
           </>
@@ -40,7 +43,7 @@ function RightSide() {
             <span>{t("header.random")}</span>
           </div>
           <div className='switch elements'>
-          <Switch size='small' defaultChecked onChange={onChange} />   
+          <Switch size='small' checked={isToggled} onChange={onToggle} />   
 
             <span className='mode'>{t("header.mode")}</span>
           </div>

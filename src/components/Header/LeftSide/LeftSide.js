@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { Select} from 'antd';
 import  {useTranslation}  from 'react-i18next';
 
-const FilmLogo = styled.img.attrs(({src}) => ({
-  src: 'https://ifilm-f71a6.web.app/images/ifilm-dark-mode.png',
+const FilmLogo = styled.img.attrs(({src})  => ({
+  src: src,
   alt: 'Image'
 }))`
  width: 120px;
@@ -14,7 +14,7 @@ const FilmLogo = styled.img.attrs(({src}) => ({
         }
 `
 
-function LeftSide() {
+function LeftSide({isDarkThem}) {
   const { i18n} = useTranslation()
   
   const changeLanguage = (language) => {
@@ -28,12 +28,12 @@ function LeftSide() {
 `;
   return (
     <Styles>
-    <FilmLogo />
+    <FilmLogo src={isDarkThem ? 'https://ifilm-f71a6.web.app/images/ifilm-dark-mode.png': 'https://ifilm-f71a6.web.app/images/ifilm.png'}/>
     <Select className='select'
     dropdownRender={(menu) => <StyledMenu>{menu}</StyledMenu>}
     onSelect={x=>{
       changeLanguage(x)
-      console.log(x)}}
+      }}
     defaultValue="EN"
     options={[
       {

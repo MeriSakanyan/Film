@@ -3,11 +3,12 @@ import Styles from './HeaderStyle'
 import LeftSide from '../Header/LeftSide/LeftSide'
 import RightSide from '../Header/RightSide/RightSide'
 
-function Header() {
+function Header({toggleTheme, isDarkThem}) {
+  console.log(isDarkThem)
   return (
     <Styles>
-       <LeftSide />
-       <RightSide />
+       <LeftSide isDarkThem={isDarkThem}/>
+       <RightSide  toggleTheme={toggleTheme} isDarkThem={isDarkThem}/>
     </Styles>
   )
 }

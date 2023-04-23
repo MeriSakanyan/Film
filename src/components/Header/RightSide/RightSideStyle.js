@@ -21,7 +21,7 @@ export default styled.div`
         height: 34px;
         outline: 0;
         width: 201px;
-        background-color: #1b1e20;
+        background-color: ${(props) => props.theme.colors.bgcolor};
         color: white;
         user-select: none;
         transition: border-color 0.3s;

@@ -6,5 +6,5 @@ export default styled.div`
      display: flex;
      flex-direction: row;
      align-items: center;
-     height: 82px;  
+     height: 82px; 
 `;
