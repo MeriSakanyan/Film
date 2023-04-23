@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import Styles from './LeftSideStyle'
 import styled from 'styled-components'
 import { Select} from 'antd';
@@ -16,7 +15,6 @@ const FilmLogo = styled.img.attrs(({src}) => ({
 `
 
 function LeftSide() {
-  const [isOpen, setOpen] = useState(false)
   const { i18n} = useTranslation()
   
   const changeLanguage = (language) => {
@@ -30,10 +28,7 @@ function LeftSide() {
 `;
   return (
     <Styles>
-  
     <FilmLogo />
-  
-   
     <Select className='select'
     dropdownRender={(menu) => <StyledMenu>{menu}</StyledMenu>}
     onSelect={x=>{

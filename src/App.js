@@ -1,13 +1,13 @@
 import './App.css';
-import Header from './components/Header/Header';
-import MainCarousel from './components/MainCarousel/MainCarousel';
-import './index.css'
+import './index.css';
+import Header from './components/Header/Header'
+import MainCarousel from './components/MainCarousel/MainCarousel'
 
 function App() {
   return (
     <>
-     <Header />
-     <MainCarousel />
+      <Header />
+      <MainCarousel />
     </>
   );
 }
