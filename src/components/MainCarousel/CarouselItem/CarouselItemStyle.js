@@ -6,7 +6,7 @@ export default styled.div`
         width: 205px;
         margin: 15px;
      }
-     /* p {
-      text-align: center;
-     } */
+     p {
+      color: #fff;
+     }
 `

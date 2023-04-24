@@ -1,11 +1,12 @@
 import React from 'react'
 import Styles from './CarouselItemStyle'
 
-function CarouselItem() {
+function CarouselItem({film}) {
   return (
+    
     <Styles>
-      <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/ee0f6f64-303a-4ffd-89a5-12520360ea5d/600x900" alt=""/>
-      <p>Шазам! Ярость богов</p>
+      <img src = {`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${film.poster_path}`} alt=""/>
+      <p>{film.title}</p>
     </Styles>
   )
 }

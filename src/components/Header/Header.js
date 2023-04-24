@@ -4,7 +4,6 @@ import LeftSide from '../Header/LeftSide/LeftSide'
 import RightSide from '../Header/RightSide/RightSide'
 
 function Header({toggleTheme, isDarkThem}) {
-  console.log(isDarkThem)
   return (
     <Styles>
        <LeftSide isDarkThem={isDarkThem}/>

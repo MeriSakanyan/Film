@@ -1,9 +1,13 @@
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import Styles from './MainCarouselStyle'
 import CarouselItem from "./CarouselItem/CarouselItem";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchFilms } from "../../redux/slice/film";
+import  {useTranslation}  from 'react-i18next';
+
 
 var settings = {
     dots: false,
@@ -33,46 +37,32 @@ var settings = {
     ]
   };
 
-
 function MainCarousel() {
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+  const { i18n} = useTranslation()
+
+  useEffect(() => {
+  dispatch(fetchFilms( { language:i18n.language, page:1}))
+  }, [i18n.language])
+
+
+  if (state.film.isLoading) {
+    return <h1>Loading...</h1>
+  }
+
   return (
 <Styles>
 <div>
     <Slider {...settings}>
-      <div>
-        <CarouselItem/>
-      </div>
-      <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div> <div>
-        <CarouselItem/>
-      </div>
+      {
+        state.film?.data?.results && state.film?.data?.results.map((film,index) => 
+        <div key={index}>
+          <CarouselItem film={film}/>
+        </div>
+    
+        )
+      }
     </Slider>
   </div>
 </Styles>
