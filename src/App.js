@@ -5,11 +5,9 @@ import styled, {ThemeProvider}  from 'styled-components';
 import {light, dark} from './Theme/Theme'
 import { useState } from 'react';
 // import './index.css';
+import GlobalStyles from './styles/GlobalStyles';
+import Main from './components/Main/Main';
 
-const  Container = styled.div `
-background-color: ${(props) => props.theme.colors.bgcolor};
-box-sizing: border-box;
-`;
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -20,10 +18,10 @@ function App() {
  
   return (
     <ThemeProvider theme = {isDarkThem ? dark : light}>
-      <Container>
+         <GlobalStyles />
         <Header toggleTheme = { toggleTheme } isDarkThem = { isDarkThem }/>
         <MainCarousel />
-      </Container>
+        <Main />
     </ThemeProvider>
   );
 }

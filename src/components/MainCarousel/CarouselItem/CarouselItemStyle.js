@@ -7,6 +7,7 @@ export default styled.div`
         margin: 15px;
      }
      p {
-      color: #fff;
+      color: #adb5bd;
+      text-align: center;
      }
 `

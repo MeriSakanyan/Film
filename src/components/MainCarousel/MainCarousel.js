@@ -9,7 +9,7 @@ import { fetchFilms } from "../../redux/slice/film";
 import  {useTranslation}  from 'react-i18next';
 
 
-var settings = {
+const settings = {
     dots: false,
     infinite: false,
     speed: 500,
@@ -38,6 +38,7 @@ var settings = {
   };
 
 function MainCarousel() {
+  
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const { i18n} = useTranslation()
@@ -56,11 +57,11 @@ function MainCarousel() {
 <div>
     <Slider {...settings}>
       {
-        state.film?.data?.results && state.film?.data?.results.map((film,index) => 
+        state.film.data.results && state.film.data.results.map((film,index) => 
         <div key={index}>
           <CarouselItem film={film}/>
         </div>
-    
+
         )
       }
     </Slider>
@@ -72,8 +73,4 @@ function MainCarousel() {
 
 
 export default MainCarousel
-            // <Slider {...settings}>
-            //   {[1, 2, 3, 4].map((item, index) => {
-            //     return <div key={index}>{item}</div>
-            //   })}
-            // </Slider> 
+        

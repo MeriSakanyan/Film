@@ -7,6 +7,13 @@ export const fetchFilms = createAsyncThunk('fetchFilms', async ({language, page}
     return response.json();
 });
 
+//  try catch
+// export const fetchFilms = createAsyncThunk('fetchFilms', async ({language, page, url}) => {
+
+//     const response = await fetch(`${url}`);
+//     return response.json();
+// });
+
 const filmSlice = createSlice({
     name: "film",
     initialState: {

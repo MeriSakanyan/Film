@@ -8,7 +8,7 @@ export default styled.div`
 
 .ant-select {
     .ant-select-selection-item {
-         background-color: inherit;
+         /* background-color: inherit; */
          color: ${(props) => props.theme.colors.languageColor};
        }
 

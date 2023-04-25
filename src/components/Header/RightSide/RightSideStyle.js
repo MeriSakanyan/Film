@@ -33,7 +33,7 @@ export default styled.div`
 }
 
 .ant-input::placeholder {
-       font-size:15px;
+       font-size:17px;
        color: ${(props) => props.theme.colors.InputTextColor};
 }
 
@@ -78,10 +78,9 @@ span {
         border-radius: 50px;
         width: 13px;
         height: 13px;
-    }
-    
-    
+    } 
 }
+
 .random, .mode {
     
     margin-bottom: 10%;
@@ -89,14 +88,14 @@ span {
     color: ${(props) => props.theme.colors.textColor};
     margin-top: 28px;
 }
+
 .random {
     margin-left: 400px;
     margin-bottom: 18px;
 }
 
 .hamburger-react {
-          color: rgb(254, 121, 0);
-          
+          color: rgb(254, 121, 0);   
 }
 
 @media (max-Width:991px){

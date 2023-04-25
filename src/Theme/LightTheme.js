@@ -7,7 +7,10 @@ const light = {
         textColor: "#adb5bd",
         switchColor: "#adb5bd",
         languageColor: "#adb5bd",
-        CarouselBgColor: "#343a40"
+        CarouselBgColor: "#343a40",
+        paginationColor: "#fe7900",
+        paginationArrowColor: "#fe7900",
+        paginationEllipsisColor: "#adb5bd"
     },
 }
 

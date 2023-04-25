@@ -6,8 +6,8 @@ export default styled.div`
     height: 400px;
     margin: 0 auto;
     .slick-prev:before, .slick-next:before {
-     color: orange;
-     font-size: 40px;
+     color: white;
+     font-size: 25px;
      opacity: 2.25;
     } 
 `

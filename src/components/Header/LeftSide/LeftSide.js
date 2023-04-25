@@ -23,7 +23,7 @@ function LeftSide({isDarkThem}) {
 
   const StyledMenu = styled.div`
   .ant-select-item-option-content {
-    color: black;
+    color: ${(props) => props.theme.colors.languageColor};
   }
   
 `;

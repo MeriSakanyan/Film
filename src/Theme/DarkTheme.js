@@ -7,7 +7,10 @@ const dark = {
         textColor: "#f8f9fa",
         switchColor: "#fe7900",
         languageColor: "#f8f9fa",
-        CarouselBgColor: "#18191a"
+        CarouselBgColor: "#18191a",
+        paginationColor: "#f8f9fa",
+        paginationArrowColor: "#f8f9fa",
+        paginationEllipsisColor: "#ffffff"
     },
 }
 

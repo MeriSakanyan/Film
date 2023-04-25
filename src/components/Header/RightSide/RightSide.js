@@ -4,7 +4,6 @@ import { Input, Switch, Button } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { Turn  as Hamburger } from 'hamburger-react'
 
-
 function RightSide({toggleTheme, isDarkThem}) {
 
   const [isOpen, setOpen] = useState(false)
