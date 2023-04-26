@@ -10,7 +10,9 @@ const light = {
         CarouselBgColor: "#343a40",
         paginationColor: "#fe7900",
         paginationArrowColor: "#fe7900",
-        paginationEllipsisColor: "#adb5bd"
+        paginationEllipsisColor: "#adb5bd",
+        MoviesNameColor: "#18191a",
+        TopMovies: "#fe7900"
     },
 }
 

@@ -10,7 +10,9 @@ const dark = {
         CarouselBgColor: "#18191a",
         paginationColor: "#f8f9fa",
         paginationArrowColor: "#f8f9fa",
-        paginationEllipsisColor: "#ffffff"
+        paginationEllipsisColor: "#ffffff",
+        MoviesNameColor: "#ffffff",
+        TopMovies: "#EEEEEE"
     },
 }
 

@@ -7,6 +7,7 @@ import { useState } from 'react';
 // import './index.css';
 import GlobalStyles from './styles/GlobalStyles';
 import Main from './components/Main/Main';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Header toggleTheme = { toggleTheme } isDarkThem = { isDarkThem }/>
         <MainCarousel />
         <Main />
+        <Footer />
     </ThemeProvider>
   );
 }

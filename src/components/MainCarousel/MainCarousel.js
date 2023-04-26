@@ -9,6 +9,10 @@ import { fetchFilms } from "../../redux/slice/film";
 import  {useTranslation}  from 'react-i18next';
 
 
+  // const lastMovies = await fetchFilms('dsfds/last/movies')
+  // const newMovies  = await fetchFilms('new/movies')
+
+  
 const settings = {
     dots: false,
     infinite: false,
@@ -38,7 +42,6 @@ const settings = {
   };
 
 function MainCarousel() {
-  
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const { i18n} = useTranslation()
