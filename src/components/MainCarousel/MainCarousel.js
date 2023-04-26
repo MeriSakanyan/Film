@@ -5,12 +5,9 @@ import Slider from "react-slick";
 import Styles from './MainCarouselStyle'
 import CarouselItem from "./CarouselItem/CarouselItem";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchFilms } from "../../redux/slice/film";
 import  {useTranslation}  from 'react-i18next';
+import { fetchCarouselFilms } from "../../redux/slice/carouselFilm";
 
-
-  // const lastMovies = await fetchFilms('dsfds/last/movies')
-  // const newMovies  = await fetchFilms('new/movies')
 
   
 const settings = {
@@ -43,15 +40,15 @@ const settings = {
 
 function MainCarousel() {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state);
+  const carouselFilmstate = useSelector((state) => state.carouselFilm);
   const { i18n} = useTranslation()
 
   useEffect(() => {
-  dispatch(fetchFilms( { language:i18n.language, page:1}))
+  dispatch(fetchCarouselFilms( {url:`https://api.themoviedb.org/3/movie/popular?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&page=${1}`}))
   }, [i18n.language])
 
 
-  if (state.film.isLoading) {
+  if (carouselFilmstate.isLoading) {
     return <h1>Loading...</h1>
   }
 
@@ -60,7 +57,7 @@ function MainCarousel() {
 <div>
     <Slider {...settings}>
       {
-        state.film.data.results && state.film.data.results.map((film,index) => 
+        carouselFilmstate.data.results && carouselFilmstate.data.results.map((film,index) => 
         <div key={index}>
           <CarouselItem film={film}/>
         </div>

@@ -10,11 +10,11 @@ import { useState } from 'react';
 function MoviesList() {
   const [page, setPage] = useState(1)
   const dispatch = useDispatch();
-  const state = useSelector((state) => state);
+  const filmstate = useSelector((state) => state.film);
   const { i18n} = useTranslation()
 
   useEffect(() => {
-    dispatch(fetchFilms( { language:i18n.language, page}))
+    dispatch(fetchFilms( {url:`https://api.themoviedb.org/3/movie/popular?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&page=${page}`}))
     },[i18n.language, page])
 
 
@@ -29,7 +29,7 @@ function MoviesList() {
        <div className='MoviesList'>
 
        {
-        state.film?.data?.results && state.film?.data?.results.map((film,index) => 
+        filmstate?.data?.results && filmstate?.data?.results.map((film,index) => 
         <div key={index}>
           <MoveListItem film={film}/>
         </div>

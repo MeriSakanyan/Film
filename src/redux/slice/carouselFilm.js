@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Action
-export const fetchFilms = createAsyncThunk('fetchFilms', async ({url}) => {
+export const fetchCarouselFilms = createAsyncThunk('fetchCarouselFilms', async ({url}) => {
      try {
         const response = await fetch(`${url}`);
         return response.json();
@@ -12,25 +12,25 @@ export const fetchFilms = createAsyncThunk('fetchFilms', async ({url}) => {
 
 
 
-const filmSlice = createSlice({
-       name: "film",
-       initialState: {
+const CarouselfilmSlice = createSlice({
+    name: "carouselFilm",
+    initialState: {
        isLoading: true,
        data: null,
        esError: false,
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchFilms.pending, (state, action) => {
+        builder.addCase(fetchCarouselFilms.pending, (state, action) => {
             state.isLoading = true
         })
-       builder.addCase(fetchFilms.fulfilled, (state, action) => {
+       builder.addCase(fetchCarouselFilms.fulfilled, (state, action) => {
         state.isLoading = false;
         state.data = action.payload;
        });
-       builder.addCase(fetchFilms.rejected, (state, action) => {
+       builder.addCase(fetchCarouselFilms.rejected, (state, action) => {
         state.isError = false;
        })
     }
 });
 
-export default filmSlice.reducer;
+export default CarouselfilmSlice.reducer;
