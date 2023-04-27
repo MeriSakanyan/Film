@@ -2,7 +2,7 @@ import React from 'react'
 import Styles from './CarouselItemStyle'
 
 function CarouselItem(film) {
-  console.log(film);
+  // console.log(film);
   return (
     
     <Styles>
