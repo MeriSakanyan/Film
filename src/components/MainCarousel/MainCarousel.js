@@ -6,10 +6,10 @@ import Styles from './MainCarouselStyle'
 import CarouselItem from "./CarouselItem/CarouselItem";
 import { useDispatch, useSelector } from "react-redux";
 import  {useTranslation}  from 'react-i18next';
-import { fetchCarouselFilms } from "../../redux/slice/carouselFilm";
+import { selectCarouselFilms } from "../../redux/slice/carouselFilms/carouselFilmsSlice";
+import { fetchCarouselFilms } from "../../redux/slice/carouselFilms/carouselFilmsAPI";
 
 
-  
 const settings = {
     dots: false,
     infinite: false,
@@ -40,28 +40,28 @@ const settings = {
 
 function MainCarousel() {
   const dispatch = useDispatch();
-  const carouselFilmstate = useSelector((state) => state.carouselFilm);
+  const films = useSelector(selectCarouselFilms);
   const { i18n} = useTranslation()
 
   useEffect(() => {
-  dispatch(fetchCarouselFilms( {url:`https://api.themoviedb.org/3/movie/popular?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&page=${1}`}))
+    dispatch(fetchCarouselFilms({url:`${process.env.REACT_APP_BASE_URL}/movie/popular?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&page=1`}))
   }, [i18n.language])
 
+  // console.log(film)
 
-  if (carouselFilmstate.isLoading) {
-    return <h1>Loading...</h1>
-  }
+  // if (film.isLoading) {
+  //   return <h1 style={{color: 'white'}}>Loading...</h1>
+  // }
 
   return (
 <Styles>
 <div>
     <Slider {...settings}>
       {
-        carouselFilmstate.data.results && carouselFilmstate.data.results.map((film,index) => 
-        <div key={index}>
-          <CarouselItem film={film}/>
+        films.data.results && films.data.results.map((film) => 
+        <div key={film.id}>
+          <CarouselItem {...film}/>
         </div>
-
         )
       }
     </Slider>

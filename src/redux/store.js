@@ -1,9 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import filmReducer from './slice/film';
-import carouselFilmReducer from './slice/carouselFilm'
+import { carouselFilmsReducer } from './slice/carouselFilms/carouselFilmsSlice';
+
 export const store = configureStore({
     reducer: {
-       film: filmReducer,
-       carouselFilm: carouselFilmReducer
+        films: carouselFilmsReducer,
     },
 });
