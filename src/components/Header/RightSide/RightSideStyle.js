@@ -10,7 +10,6 @@ export default styled.div`
             display: flex;
             flex-direction: row;
         }
-
         .ant-input[type="text"] {
         margin-top: 7px;
         padding: 0.5em;
@@ -31,12 +30,10 @@ export default styled.div`
        outline: 0;
        border-color: rgb(254, 121, 0);
 }
-
 .ant-input::placeholder {
        font-size:17px;
        color: ${(props) => props.theme.colors.InputTextColor};
 }
-
 .ant-btn {
        background-color: rgb(254, 121, 0);
        width: 53px;
@@ -46,9 +43,7 @@ export default styled.div`
        margin-top: 10px;
        margin-left: 10px;
        border-radius: 7px;
-       margin-bottom: 5px;
-      
-     
+       margin-bottom: 5px;    
 span {
         background-color: rgb(254, 121, 0);
         color: white;
@@ -56,14 +51,11 @@ span {
         text-align: center;
       }
 }
-
-
 .switch {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-
 .ant-switch {
         display: flex;
         margin-top: 2px;
@@ -71,8 +63,7 @@ span {
         margin-top: 18px;
         margin-right: 20px;
     .ant-switch-inner {
-        background-color: ${(props) => props.theme.colors.switchColor};  
-        
+        background-color: ${(props) => props.theme.colors.switchColor};   
     }
     .ant-switch-handle {
         border-radius: 50px;
@@ -80,24 +71,19 @@ span {
         height: 13px;
     } 
 }
-
-.random, .mode {
-    
+.random, .mode {   
     margin-bottom: 10%;
     font-size: 18px;
     color: ${(props) => props.theme.colors.textColor};
     margin-top: 28px;
 }
-
 .random {
     margin-left: 400px;
     margin-bottom: 18px;
 }
-
 .hamburger-react {
           color: rgb(254, 121, 0);   
 }
-
 @media (max-Width:991px){
         flex-direction: column;
         align-items: flex-end;

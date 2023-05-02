@@ -12,7 +12,11 @@ const dark = {
         paginationArrowColor: "#f8f9fa",
         paginationEllipsisColor: "#ffffff",
         MoviesNameColor: "#ffffff",
-        TopMovies: "#EEEEEE"
+        TopMovies: "#EEEEEE",
+        cardBgColor: "#242526",
+        cardTitleColor: '#eee',
+        cardDescColor: '#eee',
+        updateBtnColor: '#eee'
     },
 }
 

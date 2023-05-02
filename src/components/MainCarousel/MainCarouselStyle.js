@@ -7,7 +7,8 @@ export default styled.div`
     margin: 0 auto;
     .slick-prev:before, .slick-next:before {
      color: white;
-     font-size: 25px;
+     font-size: 40px;
      opacity: 2.25;
     } 
+
 `

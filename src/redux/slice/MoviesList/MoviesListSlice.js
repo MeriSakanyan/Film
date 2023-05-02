@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchMoviesList } from './MoviesListApi'
-// Action
+import { fetchMoviesList } from './moviesListApi';
 
-const MoviesListSlice = createSlice({
+// Action
+const moviesListSlice = createSlice({
        name: "filmList",
        initialState: {
         isLoading: true,
@@ -24,5 +24,5 @@ const MoviesListSlice = createSlice({
     }
 });
 
-export const selectMoviesList = state => state.films
-export const moviesListReducer = MoviesListSlice.reducer;
+export const selectMoviesList = state => state.filmList
+export const moviesListReducer = moviesListSlice.reducer;

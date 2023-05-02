@@ -21,8 +21,8 @@ const settings = {
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 5,
+          slidesToScroll: 5,
           // infinite: true,
           // dots: true
         }
@@ -47,11 +47,6 @@ function MainCarousel() {
     dispatch(fetchCarouselFilms({url:`${process.env.REACT_APP_BASE_URL}/movie/popular?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&page=1`}))
   }, [i18n.language])
 
-  // console.log(film)
-
-  // if (film.isLoading) {
-  //   return <h1 style={{color: 'white'}}>Loading...</h1>
-  // }
 
   return (
 <Styles>
@@ -69,8 +64,6 @@ function MainCarousel() {
 </Styles>
 );
 }
-
-
 
 export default MainCarousel
         

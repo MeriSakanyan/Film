@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Styles from './MoviesItemStyle'
+import { Card } from 'antd';
+const { Meta } = Card;
 
-function TopMoviesItem() {
+function MoviesItem(film) {
   return (
     <Styles>
-        <img src="https://movies.universalpictures.com/media/02-smb-dm-mobile-banner-1080x745-pl-f01-022723-63fe3cbc4df54-1.jpg" alt="" />
-        <div>
-            <p className='MoviesName'>film name</p>
-            <p className='MoviesYear'>film year: <strong>9999</strong></p>
-            <p className='MoviesTotalVotes'>total votes: <strong>9876</strong></p>
-        </div>
+    <Card
+      hoverable
+      cover={<img src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`} alt=""/>}
+    >
+      <Meta title="Emily the Criminal" description="year: 2022"  />
+      <Meta description="Total votes: 487" />
+    </Card>
     </Styles>
   )
 }
 
-export default TopMoviesItem
+export default MoviesItem
+

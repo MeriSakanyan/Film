@@ -5,5 +5,4 @@ export default styled.div`
      flex-direction: column;
      width: 350px;
      height: 1581px;
-     /* background-color:#C0C0C0; */
 `

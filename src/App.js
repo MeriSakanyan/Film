@@ -1,14 +1,13 @@
 import './App.css';
 import Header from './components/Header/Header'
 import MainCarousel from './components/MainCarousel/MainCarousel'
-import styled, {ThemeProvider}  from 'styled-components';
+import {ThemeProvider}  from 'styled-components';
 import {light, dark} from './Theme/Theme'
 import { useState } from 'react';
-// import './index.css';
 import GlobalStyles from './styles/GlobalStyles';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
-
+import FilmDetails from './components/FilmDetails/FilmDetails';
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -23,6 +22,7 @@ function App() {
         <Header toggleTheme = { toggleTheme } isDarkThem = { isDarkThem }/>
         <MainCarousel />
         <Main />
+        {/* <FilmDetails /> */}
         <Footer />
     </ThemeProvider>
   );

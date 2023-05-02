@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchCarouselFilms } from './carouselFilmsAPI';
 
 // Action
-
 const carouselFilmsSlice = createSlice({
        name: "films",
        initialState: {
