@@ -35,7 +35,7 @@ export default styled.div`
    }
    .film-description {
     height: 100px;
-    width: 760px;;
+    width: 760px;
     font-size: 1.25rem;
    }
    .film-video {

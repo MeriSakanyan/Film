@@ -9,8 +9,8 @@ import { fetchTopMovies } from '../../../../redux/topMovies/topMoviesApi'
 
 function TopMovies() {
   const dispatch = useDispatch();
-  const topMoviesList = useSelector(selectTopMovies)
-  const { i18n} = useTranslation()
+  const topMoviesList = useSelector(selectTopMovies);
+  const { t, i18n} = useTranslation();
 
   useEffect(() => {
     dispatch(fetchTopMovies({url:`${process.env.REACT_APP_BASE_URL}/movie/popular?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&page=1`}))
@@ -19,9 +19,11 @@ function TopMovies() {
   return (
     <Styles>
         <div className='Top-Movies-header'>
-        <h1>Top Movies</h1>
+        <h1>{t("mainPage.topMovies")}</h1>
         <SyncOutlined  className='update-btn' />
         </div>
+
+        <div className='Top_Movies_main'>
       {
         topMoviesList?.data?.results && topMoviesList?.data?.results.map((film) => 
         <div key={film.id}>
@@ -29,6 +31,7 @@ function TopMovies() {
         </div>
         )
       }
+        </div>
     </Styles>
   )
 }

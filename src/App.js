@@ -8,6 +8,7 @@ import GlobalStyles from './styles/GlobalStyles';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 import FilmDetails from './components/FilmDetails/FilmDetails';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -20,10 +21,10 @@ function App() {
     <ThemeProvider theme = {isDarkThem ? dark : light}>
          <GlobalStyles />
         <Header toggleTheme = { toggleTheme } isDarkThem = { isDarkThem }/>
-        <MainCarousel />
+        <MainCarousel/>
         <Main />
         {/* <FilmDetails /> */}
-        <Footer />
+        {/* <Footer /> */}
     </ThemeProvider>
   );
 }

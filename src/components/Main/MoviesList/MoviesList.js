@@ -19,11 +19,12 @@ function MoviesList() {
     dispatch(fetchMoviesList({url:`${process.env.REACT_APP_BASE_URL}/movie/popular?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&page=${page}`}))
   }, [i18n.language, page])
 
-
+  
   return (
     <Styles>
        <Pagination
          defaultCurrent={1}
+         current={page}
          total={5000} 
          onChange={(page) => setPage(page)}
        />
@@ -38,6 +39,7 @@ function MoviesList() {
        </div>
        <Pagination
          defaultCurrent={1}
+         current={page}
          total={5000} 
          onChange={(page) => setPage(page)}
       />

@@ -29,4 +29,23 @@ export default styled.div`
      .ant-card-meta-description {
         color: ${(props) => props.theme.colors.cardDescColor};
      }
+     .Top-movies-desc {
+      width: 265px;
+     }
+     .vote_average {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: #fe7900;
+      color: #EEEEEE;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 0 0 auto;
+     }
+     @media (max-Width:767px){
+      .ant-card {
+         width: 509px;
+      }
+   }
 `

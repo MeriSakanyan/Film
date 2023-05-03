@@ -22,4 +22,5 @@ export default styled.div`
     font-size: 15px;
     margin-left: 13px;
    }
+   
 `

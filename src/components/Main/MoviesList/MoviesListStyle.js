@@ -40,4 +40,7 @@ export default styled.div`
       .ant-pagination-item-ellipsis {
            color: ${(props) => props.theme.colors.paginationEllipsisColor} !important;
        }
+       @media (max-Width:767px){
+         width: 750px;
+   }
 `

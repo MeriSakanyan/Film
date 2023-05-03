@@ -21,6 +21,7 @@ export default styled.div`
         color: white;
 }   
       @media (max-Width:991px){
+        
         width: 100%;
         display: flex;
         justify-content: space-between;

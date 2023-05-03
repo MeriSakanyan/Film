@@ -1,11 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 
-  export const fetchCarouselFilms = createAsyncThunk(
-    'carouselFilms/fetchCarouselFilms', async ({url}) => {
-      console.log(url)
+  export const fetchCinemaMovies = createAsyncThunk(
+    'cinemaMovies/fetchCinemaMovies', async ({url}) => {
         const result = await fetch(`${url}`)
         const data = await result.json()
+        console.log(data)
         return data
     }
     )

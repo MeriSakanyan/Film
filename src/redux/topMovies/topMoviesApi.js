@@ -4,7 +4,6 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
     'topMovies/fetchTopMovies', async ({url}) => {
         const result = await fetch(`${url}`)
         const data = await result.json()
-        console.log('datadata', data);
         return data
     }
     )

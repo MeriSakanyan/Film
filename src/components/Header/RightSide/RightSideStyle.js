@@ -87,9 +87,9 @@ span {
 @media (max-Width:991px){
         flex-direction: column;
         align-items: flex-end;
-        align-content: end;
+        align-content: flex-end;
         float: right;
-        margin-top: 170px;
+        margin-top:40px;
         margin-right: 100px;
         .elements {
         display: none;
@@ -104,7 +104,7 @@ span {
         display: none;
     }
     .hamburgerelements{
-        display: none;
+        display: block;
     }
     .elements {
         display: flex;

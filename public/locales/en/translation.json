@@ -3,5 +3,9 @@
         "searchButton": "Search",
         "random": "Random",
         "mode": "NightMode"
+     },
+     "mainPage": {
+         "topMovies": "Top Movies",
+         "cinema": "To the cinema"
      }
 }

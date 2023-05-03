@@ -10,5 +10,13 @@ export default styled.div`
      font-size: 40px;
      opacity: 2.25;
     } 
-
+    @media (max-Width:991px){
+       width: 1100px;
+       margin: 0 auto;
+        
+}
+@media (max-Width:767px){
+       width: 900px; 
+       margin-left: 100px;
+}
 `

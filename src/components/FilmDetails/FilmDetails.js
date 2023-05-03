@@ -1,7 +1,6 @@
 import React from 'react';
 import Styles from './FilmDetailsStyle';
-
-
+import MainCarousel from '../MainCarousel/MainCarousel'
 function FilmDetails() {
   return (
     <Styles>
@@ -29,6 +28,8 @@ function FilmDetails() {
       </div>
  
       <div className='film-video'>
+      {/* <MainCarousel/> */}
+
       </div>
     </Styles>
   )
