@@ -22,7 +22,7 @@ function Cinema() {
         <h1>{t('mainPage.cinema')}</h1>
         <div className='Top_Movies_main'>
       {
-        cinemaMovies?.data?.results  && cinemaMovies?.data?.results.map((film) => 
+        cinemaMovies?.data?.results  && cinemaMovies?.data?.results.slice(0, 10).map((film) => 
         <div key={film.id}>
           <MoviesItem {...film}/>
         </div>

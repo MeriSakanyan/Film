@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export default styled.div`
-           width: 760px;
+        width: 760px;
+        margin-top: 24px;
        .MoviesList {
            display: flex;
            flex-wrap: wrap;

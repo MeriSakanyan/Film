@@ -24,7 +24,7 @@ function App() {
         <MainCarousel/>
         <Main />
         {/* <FilmDetails /> */}
-        {/* <Footer /> */}
+        <Footer />
     </ThemeProvider>
   );
 }

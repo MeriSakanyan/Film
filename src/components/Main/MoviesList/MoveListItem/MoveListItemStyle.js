@@ -22,5 +22,23 @@ export default styled.div`
     font-size: 15px;
     margin-left: 13px;
    }
+
+   /* .ant-rate-star.ant-rate-star-full,
+  .ant-rate-star.ant-rate-star-zero,
+  .ant-rate-star.ant-rate-star-half.ant-rate-star-active {
+      transition: transform 0s;
+  }
+
+  .ant-rate-star.ant-rate-star-half.ant-rate-star-active:hover {
+      transform: scale(0.91);
+  }
+
+  .ant-rate-star.ant-rate-star-full:hover {
+      transform: scale(0.91);
+  }
+
+  .ant-rate-star.ant-rate-star-zero:hover {
+      transform: scale(0.91);
+  } */
    
 `

@@ -13,7 +13,7 @@ export default styled.div`
       width: 1000px;
       height: 3050px;
       margin: 0 auto;
-      margin-top: 50px;
+      margin-top: 48px;
         
 }
 @media (max-Width:767px){

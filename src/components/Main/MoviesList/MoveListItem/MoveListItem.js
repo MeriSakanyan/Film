@@ -6,7 +6,7 @@ function MoveListItem(film) {
   return (
     <Styles>
       <img src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`} alt=""/>
-      <Rate allowHalf defaultValue={2.5} count={10} />
+      <Rate allowHalf defaultValue={2.5} count={10}  />
       <p>{film?.title}</p>
     </Styles>
   )
