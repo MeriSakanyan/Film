@@ -17,7 +17,12 @@ const dark = {
         cardBgColor: "#242526",
         cardTitleColor: '#eee',
         cardDescColor: '#eee',
-        updateBtnColor: '#eee'
+        updateBtnColor: '#eee',
+        DetailsBg: "#242526",
+        DetailText: "#EEEEEE",
+        DetailsDesc: "#EEEEEE",
+        DetailsAboutBg: "#242526",
+        DetailsAbotText: "#EEEEEE",
     },
 }
 

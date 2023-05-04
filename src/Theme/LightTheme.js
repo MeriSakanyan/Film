@@ -18,6 +18,11 @@ const light = {
         cardTitleColor: '#212529',
         cardDescColor: '#adb5bd',
         updateBtnColor: '#fe7900',
+        DetailsBg: "#c1c1c1",
+        DetailText: "#495057",
+        DetailsDesc: "#212529",
+        DetailsAboutBg: "#c1c1c1",
+        DetailsAbotText: "#212529",
     },
 }
 

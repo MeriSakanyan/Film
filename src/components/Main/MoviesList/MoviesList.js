@@ -8,10 +8,12 @@ import { useState } from 'react';
 import { selectMoviesList } from '../../../store/slice/moviesList/moviesListSlice';
 import { fetchMoviesList } from '../../../store/slice/moviesList/moviesListApi';
 
+
 function MoviesList() {
   const [page, setPage] = useState(1)
   const dispatch = useDispatch();
   const filmList = useSelector(selectMoviesList);
+
 
   const { i18n} = useTranslation()
 
@@ -19,7 +21,6 @@ function MoviesList() {
     dispatch(fetchMoviesList({url:`${process.env.REACT_APP_BASE_URL}/movie/popular?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&page=${page}`}))
   }, [i18n.language, page])
 
-  
   return (
     <Styles>
        <Pagination

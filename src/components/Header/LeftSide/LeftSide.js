@@ -2,6 +2,7 @@ import Styles from './LeftSideStyle'
 import styled from 'styled-components'
 import { Select} from 'antd';
 import  {useTranslation}  from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const FilmLogo = styled.img.attrs(({src})  => ({
   src: src,
@@ -16,6 +17,7 @@ const FilmLogo = styled.img.attrs(({src})  => ({
 
 function LeftSide({isDarkThem}) {
   const { i18n} = useTranslation()
+  const navigate = useNavigate()
   
   const changeLanguage = (language) => {
     i18n.changeLanguage(language)
@@ -29,7 +31,10 @@ function LeftSide({isDarkThem}) {
 `;
   return (
     <Styles>
-    <FilmLogo src={isDarkThem ? 'https://ifilm-f71a6.web.app/images/ifilm-dark-mode.png': 'https://ifilm-f71a6.web.app/images/ifilm.png'}/>
+    <FilmLogo
+     src={isDarkThem ? 'https://ifilm-f71a6.web.app/images/ifilm-dark-mode.png': 'https://ifilm-f71a6.web.app/images/ifilm.png'}
+     onClick={ () => {navigate('/')}}
+     />
     <Select className='select'
     dropdownRender={(menu) => <StyledMenu>{menu}</StyledMenu>}
     onSelect={x=>{
