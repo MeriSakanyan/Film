@@ -1,32 +1,22 @@
 import './App.css';
-import Header from './components/Header/Header'
-import MainCarousel from './components/MainCarousel/MainCarousel'
-import {ThemeProvider}  from 'styled-components';
-import {light, dark} from './Theme/Theme'
-import { useState } from 'react';
-import GlobalStyles from './styles/GlobalStyles';
-import Main from './components/Main/Main';
-import Footer from './components/Footer/Footer';
-import FilmDetails from './components/FilmDetails/FilmDetails';
-import { Routes, Route } from 'react-router-dom';
+import  Layout  from './components/Layout/Layout'
+import {Routes, Route} from 'react-router-dom'
+import MoviesList from './components/Main/MoviesList/MoviesList';
+import UniquePage from './components/UniquePage/UniquePage';
 
 function App() {
-  const [theme, setTheme] = useState("dark");
-  const isDarkThem = theme === "dark";
-  const toggleTheme = () => {
-    setTheme(isDarkThem ? "light" : "dark");
-  }
- 
+
   return (
-    <ThemeProvider theme = {isDarkThem ? dark : light}>
-         <GlobalStyles />
-        <Header toggleTheme = { toggleTheme } isDarkThem = { isDarkThem }/>
-        <MainCarousel/>
-        <Main />
-        {/* <FilmDetails /> */}
-        <Footer />
-    </ThemeProvider>
+   <Layout>
+    <Routes>
+      <Route path='/' element={<MoviesList />}/>
+      <Route path='/movie/:id' element={<UniquePage />}/>
+    </Routes>
+   </Layout>
   );
 }
 
 export default App;
+
+
+

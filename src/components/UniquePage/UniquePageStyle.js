@@ -3,13 +3,12 @@ import styled from "styled-components";
 export default styled.div`
     height: 1581px;
     width: 760px;
-    border: 1px solid #adb5bd;
     margin: 0 auto;
     img {
-        width: 233px;
+        width: 223px;
         height: 335px;
     }
-    .film-details {
+    .UniquePage {
         display: flex;
         justify-content: space-between;
     }

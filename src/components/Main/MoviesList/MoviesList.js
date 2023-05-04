@@ -5,8 +5,8 @@ import MoveListItem from './MoveListItem/MoveListItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
-import { selectMoviesList } from '../../../redux/slice/moviesList/moviesListSlice';
-import { fetchMoviesList } from '../../../redux/slice/moviesList/moviesListApi';
+import { selectMoviesList } from '../../../store/slice/moviesList/moviesListSlice';
+import { fetchMoviesList } from '../../../store/slice/moviesList/moviesListApi';
 
 function MoviesList() {
   const [page, setPage] = useState(1)

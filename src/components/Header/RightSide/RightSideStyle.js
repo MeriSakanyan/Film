@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export default styled.div`
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
         flex: 1 1 150px;
         align-items: center;
@@ -12,7 +11,7 @@ export default styled.div`
         }
         .ant-input[type="text"] {
         margin-top: 7px;
-        padding: 0.5em;
+        /* padding: 0.5em; */
         border: 0.1px solid ${(props) => props.theme.colors.InputBorderColor}; 
         border-radius: 20px;
         font-family: inherit;
@@ -33,21 +32,21 @@ export default styled.div`
 .ant-input::placeholder {
        font-size:17px;
        color: ${(props) => props.theme.colors.InputTextColor};
+       padding: 10px;
 }
 .ant-btn {
        background-color: rgb(254, 121, 0);
-       width: 53px;
+       width: 60px;
        height: 30px;
        display: flex;
        align-items: center;
        margin-top: 10px;
        margin-left: 10px;
-       border-radius: 7px;
        margin-bottom: 5px;    
 span {
         background-color: rgb(254, 121, 0);
         color: white;
-        font-size: 13px;
+        font-size: 16px;
         text-align: center;
       }
 }
@@ -55,10 +54,11 @@ span {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 15px;
 }
 .ant-switch {
         display: flex;
-        margin-top: 2px;
+        margin-bottom: 5px;
         align-items: center;
         margin-top: 18px;
         margin-right: 20px;
@@ -73,9 +73,9 @@ span {
 }
 .random, .mode {   
     margin-bottom: 10%;
-    font-size: 18px;
+    font-size: 20px;
     color: ${(props) => props.theme.colors.textColor};
-    margin-top: 28px;
+    margin-top: 25px;
 }
 .random {
     margin-left: 400px;

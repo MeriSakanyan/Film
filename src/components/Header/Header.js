@@ -9,6 +9,7 @@ function Header({toggleTheme, isDarkThem}) {
        <LeftSide isDarkThem={isDarkThem}/>
        <RightSide  toggleTheme={toggleTheme} isDarkThem={isDarkThem}/>
     </Styles>
+    
   )
 }
 

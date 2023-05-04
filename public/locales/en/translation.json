@@ -2,7 +2,7 @@
     "header":{
         "searchButton": "Search",
         "random": "Random",
-        "mode": "NightMode"
+        "mode": "Night mode"
      },
      "mainPage": {
          "topMovies": "Top Movies",

@@ -10,10 +10,10 @@ export default styled.div`
            }
      h1 {
       color: ${(props) => props.theme.colors.TopMovies}; 
-
+      font-size: 24px;
      }
      .update-btn {
-      margin-top: 30px;
+      margin-top: 20px;
       color: ${(props) => props.theme.colors.updateBtnColor};
      }
      .Top_Movies_main {

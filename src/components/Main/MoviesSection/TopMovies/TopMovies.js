@@ -3,9 +3,9 @@ import Styles from './TopMoviesStyle'
 import MoviesItem from '../MoviesItem/MoviesItem'
 import { SyncOutlined } from '@ant-design/icons'
 import { useDispatch, useSelector } from 'react-redux'
-import { selectTopMovies } from '../../../../redux/topMovies/topMoviesSlice'
+import { selectTopMovies } from '../../../../store/slice/topMovies/topMoviesSlice'
 import { useTranslation } from 'react-i18next'
-import { fetchTopMovies } from '../../../../redux/topMovies/topMoviesApi'
+import { fetchTopMovies } from '../../../../store/slice/topMovies/topMoviesApi'
 
 
 

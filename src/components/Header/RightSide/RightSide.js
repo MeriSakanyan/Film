@@ -21,7 +21,7 @@ function RightSide({toggleTheme, isDarkThem}) {
          {isOpen && 
           <> 
           <div className='search hamburgerelements'>
-              <Input  placeholder="search" type='text' />
+              <Input  placeholder="Search" type='text' />
               <Button size='small' type="search">{t("header.searchButton")}</Button>
           </div>
           <div className='random hamburgerelements'>

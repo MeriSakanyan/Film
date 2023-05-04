@@ -1,14 +1,21 @@
-import React from 'react';
-import Styles from './FilmDetailsStyle';
-import MainCarousel from '../MainCarousel/MainCarousel'
-function FilmDetails() {
+import React, { useRef } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
+import Styles from './UniquePageStyle'
+
+function UniquePage( {films} ) {
+  const { id } = useParams() 
+  const navigate = useNavigate()
+  const formRef = useRef(null)
+  
   return (
     <Styles>
-      <div className='film-details'>
+    <div className='UniquePage'>
       <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/lpVgi7PPmh6tDVbenSoYVElaKCT.jpg" alt="" />
+
+      {/* <img src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${{films.find(film => film.id === id).poster_path}}`} alt=""/> */}
         <div>
           <ul>
-             <li>Cras justo odio</li>
+             <li>dddddddddddd</li>
              <li>Dapibus ac facilisis in</li>
              <li>Morbi leo risus</li>
              <li>Porta ac consectetur ac</li>
@@ -28,15 +35,13 @@ function FilmDetails() {
       </div>
  
       <div className='film-video'>
-      {/* <MainCarousel/> */}
-
       </div>
+      <h5>Similar Movies</h5>
     </Styles>
   )
 }
 
-export default FilmDetails
-
+export default UniquePage
 
 
 

@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import Styles from './CinemaStyle'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux';
-import {selectCinemaMovies} from '../../../../redux/slice/cinemaMovies/cinemaMoviesSlice';
-import {fetchCinemaMovies} from '../../../../redux/slice/cinemaMovies/cinemaMoviesAPI'
+import {selectCinemaMovies} from '../../../../store/slice/cinemaMovies/cinemaMoviesSlice';
+import {fetchCinemaMovies} from '../../../../store/slice/cinemaMovies/cinemaMoviesAPI'
 import MoviesItem from '../MoviesItem/MoviesItem'
 
 function Cinema() {

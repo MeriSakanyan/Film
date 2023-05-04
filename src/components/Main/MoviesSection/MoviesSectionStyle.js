@@ -4,5 +4,5 @@ export default styled.div`
      display: flex;
      flex-direction: column;
      width: 350px;
-     height: 1581px;
+     height: 2824px;
 `

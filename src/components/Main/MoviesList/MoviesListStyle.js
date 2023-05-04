@@ -9,6 +9,7 @@ export default styled.div`
        }
         .ant-pagination {
            text-align: center;
+           margin-top: 24px;
        }
         .css-dev-only-do-not-override-htwhyh {
            width: 730px;

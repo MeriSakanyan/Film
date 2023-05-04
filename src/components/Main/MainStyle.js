@@ -3,19 +3,29 @@ import styled from "styled-components";
 export default styled.div`
       display: flex;
       justify-content: space-between;
-      width: 1200px;
+      width: 1140px;
       height: 3050px;
       margin: 0 auto;
       margin-top: 50px;
+      
       @media (max-Width:991px){
       display: flex;
       justify-content: space-between;
-      width: 1000px;
-      height: 3050px;
+      width: 1140px;
+      /* height: 3050px; */
       margin: 0 auto;
       margin-top: 48px;
         
 }
+/* @media (min-width: 1200px)
+ {
+    max-width: 1140px;
+}
+
+@media (min-width: 992px)
+ {
+    max-width: 960px;
+} */
 @media (max-Width:767px){
       display: flex;
       flex-direction: column;

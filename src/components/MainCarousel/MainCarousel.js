@@ -6,8 +6,8 @@ import Styles from './MainCarouselStyle'
 import CarouselItem from "./CarouselItem/CarouselItem";
 import { useDispatch, useSelector } from "react-redux";
 import  {useTranslation}  from 'react-i18next';
-import { selectCarouselFilms } from "../../redux/slice/carouselFilms/carouselFilmsSlice";
-import { fetchCarouselFilms } from "../../redux/slice/carouselFilms/carouselFilmsAPI";
+import { selectCarouselFilms } from "../../store/slice/carouselFilms/carouselFilmsSlice";
+import { fetchCarouselFilms } from "../../store/slice/carouselFilms/carouselFilmsAPI";
 
 
 const settings = {
@@ -19,7 +19,7 @@ const settings = {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 1023,
         settings: {
           slidesToShow: 5,
           slidesToScroll: 5,
@@ -51,7 +51,6 @@ function MainCarousel() {
 
   return (
 <Styles>
-<div>
     <Slider {...settings}>
       {
         films.data.results && films.data.results.map((film) => 
@@ -61,7 +60,6 @@ function MainCarousel() {
         )
       }
     </Slider>
-  </div>
 </Styles>
 );
 }
