@@ -4,6 +4,8 @@ import { moviesListReducer } from './slice/moviesList/moviesListSlice';
 import { topMoviesReducer } from './slice/topMovies/topMoviesSlice';
 import { cinemaMoviesReducer } from './slice/cinemaMovies/cinemaMoviesSlice';
 import {uniquePageFilmReducer} from './slice/uniquePage/uniquePageSlice'
+import { similarMoviesReducer } from './slice/similarMovies/similarMoviesSlice';
+import { movieVideoReducer } from './slice/movieVideo/movieVideoSlice';
 
 export const store = configureStore({
     reducer: {
@@ -12,5 +14,7 @@ export const store = configureStore({
         topMoviesList: topMoviesReducer,
         cinemaMovies: cinemaMoviesReducer,
         uniquePageFilm: uniquePageFilmReducer,
+        similarMovie: similarMoviesReducer,
+        movieVideo: movieVideoReducer,
     },
 });

@@ -7,13 +7,11 @@ function CarouselItem(film) {
 
   const navigate = useNavigate();
 
-
-  
   return (
     <Styles>
       <div onClick={ () => {navigate('/movie/'+film.id)}}>
         <img src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`} alt=""/>
-        <p>{film?.id}</p>
+        <p>{film?.title}</p>
       </div>
     </Styles>
   )

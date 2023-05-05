@@ -5,5 +5,6 @@ export default createGlobalStyle`
     background-color: ${(props) => props.theme.colors.bgcolor};
     box-sizing: border-box;
     cursor: pointer;
+    font-family: montserrat, sans-serif;
   }
 `

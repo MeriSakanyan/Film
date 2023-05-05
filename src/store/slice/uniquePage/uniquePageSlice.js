@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchUniquePageFilm }  from './uniquePageApi'
-
+ 
 // Action
 const uniquePageFilmSlice = createSlice({
        name: "uniquePageFilm",

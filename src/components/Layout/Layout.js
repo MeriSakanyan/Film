@@ -6,7 +6,6 @@ import Footer from '../Footer/Footer';
 import GlobalStyles from '../../styles/GlobalStyles';
 import {ThemeProvider}  from 'styled-components';
 import {dark, light} from '../../Theme/Theme'
-import UniquePage from '../UniquePage/UniquePage';
 
 function Layout({children}) {
     const [theme, setTheme] = useState("dark");
@@ -20,11 +19,12 @@ function Layout({children}) {
         <GlobalStyles />
         <Header toggleTheme = { toggleTheme } isDarkThem = { isDarkThem }/>
         <MainCarousel/>
+    
         <Main>
             {/* <UniquePage /> */}
             {children}
         </Main>
-        {/* <Footer /> */}
+        <Footer />
     </ThemeProvider>
   )
 }
