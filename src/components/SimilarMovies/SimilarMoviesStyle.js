@@ -5,6 +5,7 @@ export default styled.div`
      overflow: hidden;
      height: 279px;
      margin: 0 auto;
+     margin-top: 50px;
     .slick-prev:before, .slick-next:before {
       display: none;
     } 

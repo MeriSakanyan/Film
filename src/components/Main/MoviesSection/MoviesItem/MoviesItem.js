@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import Spinner from '../../../../Spinner/Spinner';
+
 
 const { Meta } = Card;
 
@@ -24,7 +24,7 @@ function MoviesItem(film) {
         cover={<LazyLoadImage
         src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`}
         alt=""
-        placeholder={<Spinner />}
+        effect='blur'
         />}
         >
           <div className='Top-movies-desc'>

@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchSearch } from './searchApi';  
  
 const seacrhSlice = createSlice({
-       name: "seacrh",
+       name: "search",
        initialState: {
         isLoading: true,
         data: [],
@@ -23,5 +23,5 @@ const seacrhSlice = createSlice({
     }
 });
 
-export const selectSearch = state => state.seacrh;
+export const selectSearch = state => state.search;
 export const searchReducer = seacrhSlice.reducer;

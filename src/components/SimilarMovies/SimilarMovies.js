@@ -11,35 +11,6 @@ import CarouselItem from "../../components/MainCarousel/CarouselItem/CarouselIte
 import { similarMoviesSettings } from "../MainCarousel/MainCarouselSettings";
 import { useParams } from "react-router-dom";
 
-
-// const settings = {
-//     dots: false,
-//     infinite: false,
-//     speed: 500,
-//     slidesToShow: 5,
-//     slidesToScroll: 5,
-//     initialSlide: 0,
-//     responsive: [
-//       {
-//         breakpoint: 1023,
-//         settings: {
-//           slidesToShow: 5,
-//           slidesToScroll: 5,
-//           // infinite: true,
-//           // dots: true
-//         }
-//       },
-//       {
-//         breakpoint: 767,
-//         settings: {
-//           slidesToShow: 2,
-//           slidesToScroll: 2,
-//           initialSlide: 2
-//         }
-//       }
-//     ]
-//   };
-
 function SimilarMovies() {
   const dispatch = useDispatch();
   const films = useSelector(selectSimilarMovies);
@@ -54,6 +25,7 @@ function SimilarMovies() {
   
   return (
   <Styles>
+    <h1 style={{color: "white"}}>Similar Movies</h1>
     <Slider {...similarMoviesSettings}>
       {
         films?.data?.results && films?.data?.results.map((film) => 

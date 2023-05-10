@@ -4,7 +4,6 @@ export const mainCarouselSettings = {
     slidesToScroll: 1,
     initialSlide: 0,
     dots: false,
-    arrows: true,
     responsive: [
       {
         breakpoint: 1023,
@@ -13,7 +12,6 @@ export const mainCarouselSettings = {
           slidesToScroll: 5,
           infinite: true,
           dots: false,
-          arrows: true,
         }
       },
       {
@@ -22,7 +20,6 @@ export const mainCarouselSettings = {
           slidesToShow: 2,
           slidesToScroll:1,
           dots: false,
-          arrows: true
         }
       }
     ]
@@ -35,7 +32,6 @@ export const similarMoviesSettings = {
     slidesToScroll: 1,
     initialSlide: 0,
     dots: false,
-    arrows: true,
     responsive: [
       {
         breakpoint: 1023,
@@ -44,7 +40,6 @@ export const similarMoviesSettings = {
           slidesToScroll: 5,
           infinite: true,
           dots: false,
-          arrows: true,
         }
       },
       {
@@ -53,7 +48,6 @@ export const similarMoviesSettings = {
           slidesToShow: 2,
           slidesToScroll:1,
           dots: false,
-          arrows: true
         }
       }
     ]

@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { Rate } from 'antd';
 import SimilarMovies from '../SimilarMovies/SimilarMovies';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function UniquePage() {
   const dispatch = useDispatch();
@@ -29,7 +31,11 @@ function UniquePage() {
     <Styles>
       <div className='UniquePage-section'>
         <div>
-           <img src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film.data?.poster_path}`} alt=""/>
+           <LazyLoadImage
+           src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film.data?.poster_path}`}
+           alt=""
+           effect='blur'
+           />
         </div>
         <ul>
             <li className='Details_bg'><span>{t("uniquePage.title")}</span> <strong>{film.data?.title}</strong></li>
@@ -54,9 +60,9 @@ function UniquePage() {
           <p>{t("uniquePage.totalVotes")} {film.data?.vote_count}</p>
         </div>
      </div>
-     <div className="lds-facebook"><div></div><div></div><div></div></div>
-
-     {/* <div className='movie-video'></div> */}
+     
+     <div className='movie-video'>
+     </div>
      <SimilarMovies/>
     </Styles>
   )

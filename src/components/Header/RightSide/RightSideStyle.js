@@ -9,7 +9,7 @@ export default styled.div`
             display: flex;
             flex-direction: row;
         } */
-        .ant-input[type="text"] {
+        /* .ant-input[type="text"] {
             margin-top: 7px;
             border: 0.1px solid ${(props) => props.theme.colors.InputBorderColor}; 
             border-radius: 20px;
@@ -48,7 +48,7 @@ export default styled.div`
            font-size: 16px;
            text-align: center;
         }
-        }
+        } */
        .switch {
            display: flex;
            flex-direction: row;

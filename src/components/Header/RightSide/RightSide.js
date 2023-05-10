@@ -4,9 +4,10 @@ import { Input, Switch, Button } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { Turn  as Hamburger } from 'hamburger-react';
 import { useNavigate } from 'react-router-dom';
+import SearchInput from '../../SearchInput/SearchInput';
 
 function RightSide({toggleTheme, isDarkThem}) {  
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [isOpen, setOpen] = useState(false)
   const { t } = useTranslation()
   const [isToggled, setIsToggled] = useState(isDarkThem);
@@ -16,19 +17,20 @@ function RightSide({toggleTheme, isDarkThem}) {
     toggleTheme();
   }
   
-  const searchSubmitHandler = () => {
-    navigate('/search')
-  }
+  // const searchSubmitHandler = () => {
+  //   navigate('/search')
+  // }
 
   return (
      <Styles>
         <Hamburger toggled={isOpen} toggle={setOpen} />
          {isOpen && 
           <> 
-          <div className='search hamburgerelements'>
+          <SearchInput />
+          {/* <div className='search hamburgerelements'>
           <Input  placeholder="Search" type='text' />
           <Button size='small' type="search" onClick={searchSubmitHandler}>{t("header.searchButton")}</Button>
-          </div>
+          </div> */}
           <div className='random hamburgerelements'>
             <span>{t("header.random")}</span>
           </div>
@@ -39,10 +41,12 @@ function RightSide({toggleTheme, isDarkThem}) {
           </>
         }
 
-          <div className='search elements'>
+
+          {/* <div className='search elements'>
             <Input  placeholder="search" type='text' />
             <Button size='small' type="search"  onClick={searchSubmitHandler}>{t("header.searchButton")}</Button>
-          </div>
+          </div> */}
+           <SearchInput />
           <div className='random  elements'>
             <span>{t("header.random")}</span>
           </div>

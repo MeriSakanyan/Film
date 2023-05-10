@@ -9,8 +9,8 @@ export default styled.div`
      /* color: white;
      font-size: 30px;
      opacity: 0.7;
-     color: ${(props) => props.theme.colors.CarouselArrowColor}; */
-     /* display: none; */
+     color: ${(props) => props.theme.colors.CarouselArrowColor}; */ 
+     display: none;
     } 
 
     @media screen and (max-Width:1023px){

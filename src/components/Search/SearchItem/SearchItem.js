@@ -14,7 +14,7 @@ function SearchItem(film) {
         <Card
           hoverable
         //   cover={<img src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`} alt=""/>}
-        cover={<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3SI2lPLtI3MNKWTsypbI4YyAxrD9xbqMrlvGEHL5DsW2d5aWN6_ckmLwtMuBi3vXBUjo&usqp=CAU' alt='img' />}
+        cover={<img src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`} alt='' />}
       >
     
           {/* <Meta title={film.title} description={film.release_date}  />
