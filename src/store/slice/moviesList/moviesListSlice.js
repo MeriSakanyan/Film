@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchMoviesList } from './moviesListApi';
 
-// Action
 const moviesListSlice = createSlice({
        name: "filmList",
        initialState: {
@@ -24,5 +23,5 @@ const moviesListSlice = createSlice({
     }
 });
 
-export const selectMoviesList = state => state.filmList
+export const selectMoviesList = state => state.filmList;
 export const moviesListReducer = moviesListSlice.reducer;

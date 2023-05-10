@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchSimilarMovies } from './similarMoviesApi';
+import { fetchSimilarMovies } from './similarMoviesApi'; 
 
-// Action
 const similarMoviesSlice = createSlice({
        name: "similarMovie",
        initialState: {
@@ -24,5 +23,5 @@ const similarMoviesSlice = createSlice({
     }
 });
 
-export const selectSimilarMovies = state => state.similarMovie
+export const selectSimilarMovies = state => state.similarMovie;
 export const similarMoviesReducer = similarMoviesSlice.reducer;

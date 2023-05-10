@@ -2,28 +2,25 @@ import styled from "styled-components";
 
 export default styled.div`
      img {
-        height: 309px;
-        width: 206px;
-        margin: 15px;
+         height: 308px;
+         width: 205px;
+         margin: 0 auto;
      }
      p {
       color: #adb5bd;
       text-align: center;
      }
-     @media (max-Width:991px){
+
+     @media screen and (max-Width:991px){
        img {
          height: 249px;
          width: 166px;
        }
-        
-}
-     @media (max-Width:767px){
+      }
+     @media screen and (max-Width:767px){
        img {
-         /* height: 527px;
-         width: 351px; */
          height: 613px;
          width: 428px;
        }
-        
-}
+      }
 `

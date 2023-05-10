@@ -6,6 +6,20 @@
      },
      "mainPage": {
          "topMovies": "Top Movies",
-         "cinema": "To the cinema"
+         "cinema": "To the cinema",
+         "year": "Year:",
+         "totalVotes": "Total votes"
+     },
+     "uniquePage": {
+        "title": "Title:",
+        "originalTitle": "Original name:",
+        "year": "Year:",
+        "genre": "Genre:",
+        "duration": "Duration:",
+        "productionCountries": "Country:",
+        "budget": "Budget:",
+        "movieRating": "Movie rating:",
+        "totalVotes": "Total votes:",
+        "minute": "m."
      }
 }

@@ -9,13 +9,10 @@ export default styled.div`
      flex-direction: row;
      align-items: center;
      height: 82px; 
-     @media (max-Width:991px){
-        margin: o auto;
-        margin-left: 199px;
-}
-
-      @media (max-Width:991px){
-          margin: o auto;
-}
-
-`;
+     /* @media screen and (max-width: 1199px){
+        width: 930px;
+     }
+     @media screen and (max-width: 991px){
+        width: 690px;
+     } */
+`

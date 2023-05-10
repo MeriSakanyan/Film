@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchUniquePageFilm }  from './uniquePageApi'
+import { fetchUniquePageFilm }  from './uniquePageApi';
  
-// Action
 const uniquePageFilmSlice = createSlice({
        name: "uniquePageFilm",
        initialState: {
@@ -24,5 +23,5 @@ const uniquePageFilmSlice = createSlice({
     }
 });
 
-export const selectUniquePageFilm = state => state.uniquePageFilm
+export const selectUniquePageFilm = state => state.uniquePageFilm;
 export const uniquePageFilmReducer = uniquePageFilmSlice.reducer;

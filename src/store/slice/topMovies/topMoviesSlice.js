@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchTopMovies } from './topMoviesApi';
 
-// Action
 const topMoviesSlice = createSlice({
        name: "topMoviesList",
        initialState: {
@@ -25,5 +24,5 @@ const topMoviesSlice = createSlice({
     
 });
 
-export const selectTopMovies = state => state.topMoviesList
+export const selectTopMovies = state => state.topMoviesList;
 export const topMoviesReducer = topMoviesSlice.reducer;

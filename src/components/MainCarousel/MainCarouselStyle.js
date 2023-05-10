@@ -1,24 +1,25 @@
 import styled from "styled-components";
 
 export default styled.div`
-    box-sizing: border-box;
-    /* background-color: ${(props) => props.theme.colors.CarouselBgColor};  */
-    width: 1800px;
-    height: 400px;
-    margin: 0 auto;
+     box-sizing: border-box;
+     width: 1800px;
+     height: 400px;
+     margin: 0 auto;
     .slick-prev:before, .slick-next:before {
-     color: white;
+     /* color: white;
      font-size: 30px;
      opacity: 0.7;
-     color: ${(props) => props.theme.colors.CarouselArrowColor};
+     color: ${(props) => props.theme.colors.CarouselArrowColor}; */
+     /* display: none; */
     } 
-    @media (max-Width:991px){
-       width: 1100px;
+
+    @media screen and (max-Width:1023px){
+       width: 1023px;
        margin: 0 auto;
-        
-}
-@media (max-Width:767px){
+    }
+
+    @media screen and (max-Width:767px){
        width: 900px; 
-       margin-left: 100px;
-}
+      
+    }
 `

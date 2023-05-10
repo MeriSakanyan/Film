@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchCinemaMovies } from './cinemaMoviesAPI'
+import { fetchCinemaMovies } from './cinemaMoviesAPI';
 
-// Action
 const cinemaMoviesSlice = createSlice({
        name: "cinemaMovies",
        initialState: {

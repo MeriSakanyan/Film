@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import Styles from './MoviesListStyle'
+import React, { useEffect } from 'react';
+import Styles from './MoviesListStyle';
 import { Pagination } from 'antd';
 import MoveListItem from './MoveListItem/MoveListItem';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,13 +8,10 @@ import { useState } from 'react';
 import { selectMoviesList } from '../../../store/slice/moviesList/moviesListSlice';
 import { fetchMoviesList } from '../../../store/slice/moviesList/moviesListApi';
 
-
 function MoviesList() {
   const [page, setPage] = useState(1)
   const dispatch = useDispatch();
   const filmList = useSelector(selectMoviesList);
-
-
   const { i18n} = useTranslation()
 
   useEffect(() => {

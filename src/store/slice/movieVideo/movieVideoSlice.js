@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchMovieVideo } from './movieVideoApi';  
- 
-// Action
+
 const movieVideoSlice = createSlice({
        name: "movieVideo",
        initialState: {

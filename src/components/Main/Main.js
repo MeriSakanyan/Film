@@ -1,15 +1,12 @@
-import React from 'react'
-import Styles from './MainStyle'
-import MoviesList from './MoviesList/MoviesList'
-import MoviesSection from './MoviesSection/MoviesSection'
-import UniquePage from '../UniquePage/UniquePage'
+import React from 'react';
+import Styles from './MainStyle';
+import MoviesSection from './MoviesSection/MoviesSection';
+
 
 function Main({children}) {
   return (
     <Styles>
       {children}
-       {/* <MoviesList /> */}
-       <MoviesSection />
     </Styles>
   )
 }

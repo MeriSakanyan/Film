@@ -6,8 +6,22 @@
      },
      "mainPage": {
         "topMovies": "Рекомендуемые фильмы",
-        "cinema": "В кино"
-    }
+        "cinema": "В кино",
+        "year": "Год:",
+        "totalVotes": "Всего голосов:"
+    },
+    "uniquePage": {
+        "title": "Название:",
+        "originalTitle": "Оригинальное название:",
+        "year": "Год:",
+        "genre": "Жанр:",
+        "duration": "Время:",
+        "productionCountries": "Страна:",
+        "budget": "Бюджет:",
+        "movieRating": "Рейтинг фильма:",
+        "totalVotes": "Всего голосов:",
+        "minute": "мин."
+     }
 }
 
 

@@ -1,44 +1,23 @@
-import React, { useEffect } from 'react'
-import Styles from './FooterStyle'
-import styled from 'styled-components';
+import React, { useEffect } from 'react';
+import Styles from './FooterStyle';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectMovieVideo } from '../../store/slice/movieVideo/movieVideoSlice'; 
 import { fetchMovieVideo } from '../../store/slice/movieVideo/movieVideoApi';
-import { useParams } from 'react-router-dom';
-
-
-  
-const FooterContent = styled.div`
-    border: 1px solid #000;
-    background-image: url(${"https://image.tmdb.org/t/p/original/8YFL5QQVPy3AgrEQxNYVSgiPEbe.jpg"});
-    min-height: 650px;
-    background-position: 50%;
-    background-size: cover;
-    background-attachment: fixed;
-    transition: all .5s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-top: 200px;
-`;
-
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
   const dispatch = useDispatch();
   const video = useSelector(selectMovieVideo);
-  const { id } = useParams() 
+  const { i18n} = useTranslation()
 
-   useEffect(() => {
-   
-  dispatch(fetchMovieVideo({url:`https://api.themoviedb.org/3/movie/28055/videos?api_key=c90960472340983f37679878e271035a&language=en-US`}))
-  console.log(123123, video);
-}, [id])
+  useEffect(() => {
+    dispatch(fetchMovieVideo({url:`https://api.themoviedb.org/3/movie/640146/videos?api_key=c90960472340983f37679878e271035a&language=${i18n.language}`}))
+  }, [i18n.language])
 
   return (
     <Styles>
-       <FooterContent />
-       <div></div>
+        <iframe data-v-2b09c3ac="" src={"https://www.youtube.com/embed/" + video.data?.results?.[0].key} title="YouTube video player" frameBorder="0" className="w-50 shadow-5 trailer-frame"></iframe> 
+        <p>Copyright © 2019 iFilm.com. All Rights Reserved.</p>
     </Styles>
   )
 }
