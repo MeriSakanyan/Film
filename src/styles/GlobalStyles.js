@@ -8,6 +8,5 @@ export default createGlobalStyle`
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;    
-    /* width: 1920px; */
   }
 `

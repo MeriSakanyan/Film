@@ -3,7 +3,7 @@ import Styles from './CarouselItemStyle';
 import {useNavigate} from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import Spinner from '../../../Spinner/Spinner';
+
 
 function CarouselItem(film) {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ function CarouselItem(film) {
         <LazyLoadImage
         src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`} 
         alt=''
-        placeholder={<Spinner /> }
+        effect='blur'
         />
         <p>{film?.title}</p>
       </div>

@@ -16,7 +16,6 @@ export default styled.div`
      color: ${(props) => props.theme.colors.MoviesNameColor};
      text-align: center;
      font-size: 16px;
-     
     }
     .css-dev-only-do-not-override-htwhyh {
      width: 223px;
@@ -25,9 +24,16 @@ export default styled.div`
      margin-top: 8px;
     }
 
-    /* @media screen and (max-Width: 991px) {
+    .ant-rate-star-half,
+    .ant-rate-star-full {
+      color: red;
+    }
+    .ant-rate-star-zero {
+      color: green;
+    }
+     @media screen and (max-Width: 991px) {
       img {
         width: 350px
       }
-    } */
+    } 
 `

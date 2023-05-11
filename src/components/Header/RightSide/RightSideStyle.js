@@ -94,9 +94,9 @@ export default styled.div`
                .elements {
                display: none;
                } 
-               /* .hamburgerelements{
+               .hamburgerelements{
                display: flex;
-               } */
+               }
         }
         @media (min-Width:991px){
             .hamburger-react {

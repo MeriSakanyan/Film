@@ -17,7 +17,7 @@ function MoveListItem(film) {
          alt=""
          placeholder={<Spinner />}
          />
-        <Rate allowHalf defaultValue={2.5} count={10}  />
+        <Rate allowHalf disabled value={film?.vote_average} count={10} />
         <p>{film?.title}</p>
       </div>
     </Styles>

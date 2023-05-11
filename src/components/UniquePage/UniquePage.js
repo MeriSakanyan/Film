@@ -16,7 +16,6 @@ function UniquePage() {
  
   const { t, i18n} = useTranslation()
   const { id } = useParams() 
-  // console.log("id", id)
   const [value, setValue] = useState(3);
   const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
   
@@ -25,7 +24,6 @@ function UniquePage() {
     dispatch(fetchUniquePageFilm({url:`${process.env.REACT_APP_BASE_URL}/movie/${id}?api_key=c90960472340983f37679878e271035a&language=${i18n.language}`}))
   }, [i18n.language, id])
   
-  // console.log("film", film)
 
    return (
     <Styles>

@@ -9,10 +9,10 @@ export default styled.div`
      flex-direction: row;
      align-items: center;
      height: 82px; 
-     /* @media screen and (max-width: 1199px){
+     @media screen and (max-width: 1199px){
         width: 930px;
      }
      @media screen and (max-width: 991px){
         width: 690px;
-     } */
+     }
 `

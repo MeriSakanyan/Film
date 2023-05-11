@@ -4,8 +4,6 @@ import { Select} from 'antd';
 import  {useTranslation}  from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
-
-
 const FilmLogo = styled.img.attrs(({src})  => ({
   src: src,
   alt: 'Image'
@@ -33,10 +31,11 @@ function LeftSide({isDarkThem}) {
     <FilmLogo
     src={isDarkThem ? 'https://ifilm-f71a6.web.app/images/ifilm-dark-mode.png': 'https://ifilm-f71a6.web.app/images/ifilm.png'}
     onClick={ () => {navigate('/')}}
-     />
+    />
+
     <Select className='select'
     dropdownRender={(menu) => <StyledMenu>{menu}</StyledMenu>}
-    onSelect={x=>{
+    onSelect={x => {
       changeLanguage(x)
       }}
     defaultValue="EN"
@@ -50,8 +49,7 @@ function LeftSide({isDarkThem}) {
         label: 'RU',
       },
     ]}
-  />
- 
+    />
     </Styles>
   )
 }

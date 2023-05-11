@@ -17,6 +17,7 @@ const similarMoviesSlice = createSlice({
         state.data = action.payload;
        })
        .addCase(fetchSimilarMovies.rejected, (state, action) => {
+        console.log(15);
         state.isLoading = false;
         state.isError = true;
        })

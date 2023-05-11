@@ -17,7 +17,7 @@ function SimilarMovies() {
   const { i18n} = useTranslation()
   const { id } = useParams() 
 
-
+console.log(films);
   useEffect(() => {
     dispatch(fetchSimilarMovies({url:`${process.env.REACT_APP_BASE_URL}/movie/${id}/similar?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&page=1`}))
   }, [i18n.language, id])

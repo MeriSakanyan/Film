@@ -17,12 +17,12 @@ import Styles from './SearchInputStyle'
     
     const handleInputChange = (e) => {
       setvalue(e.target.value)
-     
     }
+
   return (
     <Styles>
         <div className='search hamburgerelements'>
-          <Input  placeholder="Search" type='text' onChange={handleInputChange}/>
+          <Input  placeholder="Search"  type='text' onChange={handleInputChange}/>
           <Button size='small' type="search"
            onClick={searchSubmitHandler}>{t("header.searchButton")}
            </Button>

@@ -44,7 +44,7 @@ export default styled.div`
         /* text-align: center; */
         font-size: 16px;
         font-weight: 700;
-        margin: -20px 0 0 auto;
+        margin: -30px 20px 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;

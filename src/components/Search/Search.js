@@ -7,25 +7,27 @@ import { useTranslation } from 'react-i18next';
 import { selectSearch } from '../../store/slice/search/searchSlice';
 import { fetchSearch } from '../../store/slice/search/searchApi';
 import { useParams } from 'react-router-dom';
-// import { useEffect } from 'react';
+import ErrorPage from '../ErrorPage/ErrorPage';
+
 
 function Search() {
   const { searchText } = useParams() 
   const dispatch = useDispatch();
   const search = useSelector(selectSearch);
-  const { t, i18n} = useTranslation()
+  const { i18n} = useTranslation()
+  const [page, setPage] = useState(1)
 
   
   useEffect(() => {
     
-    dispatch(fetchSearch({url:`${process.env.REACT_APP_BASE_URL}/search/movie?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&query=${searchText}&page=1&include_adult=false`}))
-  }, [i18n.language, searchText])
+    dispatch(fetchSearch({url:`${process.env.REACT_APP_BASE_URL}/search/movie?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&query=${searchText}&page=${page}`}))
+  }, [i18n.language, searchText, page])
   
-  console.log(search)
-  
+  console.log(search);
   return (
     <Styles>
        <div className='Search_list'>
+
         {
           search.data.results && search.data.results.map((film) => 
           <div key={film.id} >
@@ -34,14 +36,16 @@ function Search() {
           )
         }
         {
-          !search.data.results  && 
-          <h1>Chka</h1>
+          !search.data.results?.length  && !search.isLoading &&
+          <ErrorPage />
         }
+      
       </div>
-      {/* <Pagination
+      <Pagination
          defaultCurrent={1}
-         total={5000} 
-       /> */}
+         total={100} 
+         onChange={(page) => setPage(page)}
+       />
     </Styles>
   )
 }

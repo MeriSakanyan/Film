@@ -6,6 +6,7 @@ import UniquePage from './components/UniquePage/UniquePage';
 import Search from './components/Search/Search';
 import { Suspense } from 'react';
 import Spinner from './Spinner/Spinner';
+import 'antd/dist/reset.css';
 
 function App() {
 

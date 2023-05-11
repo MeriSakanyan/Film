@@ -13,7 +13,7 @@ export default styled.div`
       margin: 0 auto;
       margin-top: 48px;
      }
-/* 
+
      @media (max-Width:767px){
       display: flex;
       flex-direction: column;
@@ -27,5 +27,5 @@ export default styled.div`
       .MoviesList {
             margin-left: 100px;
       }
-     } */
+     }
 `

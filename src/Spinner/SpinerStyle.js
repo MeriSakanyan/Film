@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export default styled.div`
 .lds-dual-ring {
-  display: inline-block;
+  /* display: inline-block;
   width: 100px;
-  height: 100px;
+  height: 100px; */
+  
 }
 .lds-dual-ring:after {
   content: " ";
@@ -14,6 +15,7 @@ export default styled.div`
   margin: 8px;
   border-radius: 50%;
   animation: lds-dual-ring 1.2s linear infinite;
+  
 }
 @keyframes lds-dual-ring {
   0% {
@@ -29,12 +31,14 @@ export default styled.div`
   position: relative;
   height: 308px;
   width: 205px;
-  /* background-color: white !important; */
+  background-color: white !important;
+  padding: 114px 61px;
+  
 }
 .lds-spinner div {
 
   transform-origin: 40px 40px;
-  animation: lds-spinner 1.2s linear infinite;
+  animation: lds-spinner 2.2s linear infinite;
 }
 .lds-spinner div:after {
   content: " ";

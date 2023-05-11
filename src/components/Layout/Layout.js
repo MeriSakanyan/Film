@@ -10,6 +10,7 @@ import {dark, light} from '../../Theme/Theme'
 import MoviesSection from '../Main/MoviesSection/MoviesSection';
 
 
+
 function Layout({hasSidebar = true}) {
     const [theme, setTheme] = useState("dark");
     const isDarkThem = theme === "dark";
@@ -17,7 +18,7 @@ function Layout({hasSidebar = true}) {
     const toggleTheme = () => {
       setTheme(isDarkThem ? "light" : "dark");
     }
-   
+    
   return (
     <ThemeProvider theme = {isDarkThem ? dark : light}>
         <GlobalStyles />

@@ -1,6 +1,6 @@
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import React, { Suspense, useEffect } from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import Styles from './MainCarouselStyle';
 import CarouselItem from "./CarouselItem/CarouselItem";
@@ -9,7 +9,7 @@ import  {useTranslation}  from 'react-i18next';
 import { selectCarouselFilms } from "../../store/slice/carouselFilms/carouselFilmsSlice";
 import { fetchCarouselFilms } from "../../store/slice/carouselFilms/carouselFilmsAPI";
 import { mainCarouselSettings } from "./MainCarouselSettings";
-import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+
 
 
 function MainCarousel() {
@@ -20,10 +20,9 @@ function MainCarousel() {
   useEffect(() => {
     dispatch(fetchCarouselFilms({url:`${process.env.REACT_APP_BASE_URL}/movie/popular?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&page=1`}))
   }, [i18n.language])
-
+  
   return (
   <Styles>
-    <SlArrowLeft />
     <Slider {...mainCarouselSettings}>
       {
         films.data.results && films.data.results.map((film) => 
@@ -33,7 +32,6 @@ function MainCarousel() {
         )
       }
     </Slider>
-    <SlArrowRight />
   </Styles>
 );
 }

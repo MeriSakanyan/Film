@@ -27,7 +27,7 @@ export default styled.div`
       display: flex;
       justify-content: space-between;
     }
-    /* @media (max-Width:991px){
+    @media (max-Width:991px){
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -36,5 +36,5 @@ export default styled.div`
       .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
                font-size: 20px;
           }
-    } */
+    }
 `

@@ -1,27 +1,27 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchSearch } from './searchApi';  
+import { fetchRandom } from './randomApi';
  
-const searchSlice = createSlice({
-       name: "search",
+const randomSlice = createSlice({
+       name: "random",
        initialState: {
         isLoading: true,
         data: [],
         isError: false,
         },
     extraReducers: (builder) => {
-        builder.addCase(fetchSearch.pending, (state, action) => {
+        builder.addCase(fetchRandom.pending, (state, action) => {
         state.isLoading = true
         })
-        .addCase(fetchSearch.fulfilled, (state, action) => {
+        .addCase(fetchRandom.fulfilled, (state, action) => {
         state.isLoading = false;
         state.data = action.payload;
        })
-       .addCase(fetchSearch.rejected, (state, action) => {
+       .addCase(fetchRandom.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
        })
     }
 });
 
-export const selectSearch = state => state.search;
-export const searchReducer = searchSlice.reducer;
+export const selectRandom = state => state.random;
+export const randomReducer = randomSlice.reducer;

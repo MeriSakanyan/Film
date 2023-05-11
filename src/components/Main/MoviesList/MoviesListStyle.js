@@ -35,15 +35,17 @@ export default styled.div`
        .ant-select-selector, .ant-pagination-options {
            display: none;
        }
-       path {
+     
+        .anticon-left, .anticon-right  {
            color: ${(props) => props.theme.colors.paginationArrowColor};
       }
+  
       .ant-pagination-item-ellipsis {
            color: ${(props) => props.theme.colors.paginationEllipsisColor} !important;
        }
-       /* @media scrren and (max-Width:991px){
+       @media scrren and (max-Width:991px){
      
             width: 600px;
         
-      } */
+      }
 `

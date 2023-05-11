@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export default styled.div`
-      height: 1140px;
-      width: 1140px;
+      /* height: 755px;
+      width: 1498px; */
       margin: 0 auto;
       .Search_list {
         display: flex;

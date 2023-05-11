@@ -18,7 +18,7 @@ export default styled.div`
     
     iframe {
     box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22);
-    font: 12px Roboto, Arial, sans-serif;
+    font-family: 12px Roboto, Arial, sans-serif;
     background-color: #000;
     color: #fff;
     height: 50%;

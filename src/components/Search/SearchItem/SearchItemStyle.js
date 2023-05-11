@@ -1,22 +1,19 @@
 import styled from "styled-components";
 
 export default styled.div`
-  display: flex;
-  margin-top: 24px;
-  flex-direction: column;
+          display: flex;
+          margin-top: 24px;
+          flex-direction: column;
      .ant-card   {
           display: flex;
           height: 202px;
           width: 540px;
           background-color: ${(props) => props.theme.colors.cardBgColor};
           border: 1px solid ${(props) => props.theme.colors.cardBgColor};
-          /* width: '25%'; */
          text-align: 'center';
-         margin-top: 25px;
      }
      img {
         height: 202px;
-        width: 50%;
         border-radius: 0 !important;
      }
      .ant-card-bordered {
@@ -25,13 +22,14 @@ export default styled.div`
 
      div.ant-card-meta-title{
         color: ${(props) => props.theme.colors.cardTitleColor};
+        padding: 0;
      }
      .ant-card-meta-description {
         color: ${(props) => props.theme.colors.cardDescColor};
      }
      .card_description {
-      width: 354px;
-      height: 105px;
+      width: 338px;
+      height: 57px;
      }
      p {
       color: ${(props) => props.theme.colors.cardTitleColor};
@@ -39,6 +37,7 @@ export default styled.div`
      .card_rate {
       width: 354px;
       height: 48px;
+      margin-top: 40px;
      }
      .vote_average {
       width: 35px;
