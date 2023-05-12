@@ -5,13 +5,13 @@ import MoviesList from './components/Main/MoviesList/MoviesList';
 import UniquePage from './components/UniquePage/UniquePage';
 import Search from './components/Search/Search';
 import { Suspense } from 'react';
-import Spinner from './Spinner/Spinner';
 import 'antd/dist/reset.css';
+import Loading from './Loading/Loading';
 
 function App() {
 
   return (
-    <Suspense fallback={<Spinner />}>
+    <Suspense fallback={<Loading />}>
     <Routes>
       <Route path='/' element={<Layout/>}>
         <Route path='/' element={<MoviesList />}/>

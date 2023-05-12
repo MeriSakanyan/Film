@@ -1,17 +1,27 @@
 import styled from "styled-components";
 
 export default styled.div`
-     box-sizing: border-box;
-     width: 100%;
-     height: 400px;
-     margin: 0 auto;
-     margin: 0 auto;
+
+overflow: hidden;
+     .carousel_container {
+           background-color: ${(props) => props.theme.colors.CarouselBgColor} !important;
+          box-sizing: border-box;
+          /* width: 100%; */
+          
+    
+     min-height: 300px;
+     }
+    .slick-list {
+      width: 100%;
+      /* width: 1900px; */
+      flex-shrink: 0;
+    }
     .slick-prev:before, .slick-next:before {
-     color: white;
+     /* color: white;
      font-size: 30px;
      opacity: 0.7;
-     color: ${(props) => props.theme.colors.CarouselArrowColor}; 
-display: none;
+     color: ${(props) => props.theme.colors.CarouselArrowColor};  */
+     display: none;
     } 
 
     @media screen and (max-Width:1023px){
@@ -22,5 +32,5 @@ display: none;
     @media screen and (max-Width:767px){
        width: 900px; 
       
-    }
+    } 
 `

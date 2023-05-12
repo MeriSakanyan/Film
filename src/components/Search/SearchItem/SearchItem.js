@@ -28,7 +28,7 @@ function SearchItem(film) {
           <p>{film?.overview.slice(0, 100)}</p>
          </div>
         <div className='card_rate'>
-          <Rate allowHalf defaultValue={2.5} count={10}  />
+        <Rate allowHalf disabled value={film?.vote_average} count={10} />
         </div>
           
  

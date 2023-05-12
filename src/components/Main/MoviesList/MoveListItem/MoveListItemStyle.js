@@ -9,9 +9,10 @@ export default styled.div`
     img {
      height: 100%;
      width: 233.33px;
-     
-    }
+     transition: all .3s ease;
     
+    }
+
     p {
      color: ${(props) => props.theme.colors.MoviesNameColor};
      text-align: center;
@@ -26,11 +27,9 @@ export default styled.div`
 
     .ant-rate-star-half,
     .ant-rate-star-full {
-      color: red;
+      color: rgb(254, 121, 0);
     }
-    .ant-rate-star-zero {
-      color: green;
-    }
+
      @media screen and (max-Width: 991px) {
       img {
         width: 350px

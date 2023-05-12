@@ -1,15 +1,21 @@
 import styled from "styled-components";
 
 export default styled.div`
+.carousel_item {
+  padding: 16px !important;
+  margin: 0 auto;
+}
      img {
          height: 308px;
          width: 205px;
-         margin: 0 auto;
+         vertical-align: middle;
+         margin-top: 20px;
      }
      p {
       color: #adb5bd;
       text-align: center;
      }
+
 
      @media screen and (max-Width:991px){
        img {

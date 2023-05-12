@@ -5,7 +5,7 @@ export default styled.div`
   /* display: inline-block;
   width: 100px;
   height: 100px; */
-  
+  /* position: fixed; */
 }
 .lds-dual-ring:after {
   content: " ";
@@ -15,7 +15,6 @@ export default styled.div`
   margin: 8px;
   border-radius: 50%;
   animation: lds-dual-ring 1.2s linear infinite;
-  
 }
 @keyframes lds-dual-ring {
   0% {
@@ -33,6 +32,9 @@ export default styled.div`
   width: 205px;
   background-color: white !important;
   padding: 114px 61px;
+  /* position: absolute; */
+    /* top: 50%;
+    right: 50%; */
   
 }
 .lds-spinner div {
@@ -52,8 +54,6 @@ export default styled.div`
   border-radius: 20%;
   background:  #fe7900!important;
 }
-
-
 
 .lds-spinner div:nth-child(1) {
   transform: rotate(0deg);

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Styles from './RightSideStyle';
-import { Switch } from 'antd';
+import { Switch,  Button, Input } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { Turn  as Hamburger } from 'hamburger-react';
-import SearchInput from '../../SearchInput/SearchInput';
+// import SearchInput from '../../SearchInput/SearchInput';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { selectMoviesList } from '../../../store/slice/moviesList/moviesListSlice';
@@ -12,13 +12,26 @@ import { selectCarouselFilms } from '../../../store/slice/carouselFilms/carousel
 
 function RightSide({toggleTheme, isDarkThem}) {  
   const [isOpen, setOpen] = useState(false)
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [isToggled, setIsToggled] = useState(isDarkThem);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const films = useSelector(selectMoviesList);
-  const { i18n} = useTranslation();
   const carouselFilms = useSelector(selectCarouselFilms);
+
+
+  const [value, setvalue] = useState('')
+
+
+  const searchSubmitHandler = () => {
+    if(value){
+      navigate('/search/'+value)
+    }
+  }
+  
+  const handleInputChange = (e) => {
+    setvalue(e.target.value)
+  }
 
   const onToggle =()=>{
     setIsToggled(!isToggled);
@@ -41,7 +54,12 @@ function RightSide({toggleTheme, isDarkThem}) {
         <Hamburger toggled={isOpen} toggle={setOpen} />
          {isOpen && 
           <> 
-          <SearchInput />
+            <div className='search hamburgerelements'>
+               <Input  placeholder="Search"  type='text' onChange={handleInputChange}/>
+               <Button size='small' type="search"
+                onClick={searchSubmitHandler}>{t("header.searchButton")}
+               </Button>
+           </div> 
 
           <div className='random hamburgerelements'>
             <label onClick={getRandomMovieHandler}>{t("header.random")}</label>
@@ -55,7 +73,12 @@ function RightSide({toggleTheme, isDarkThem}) {
           </>
          }
 
-           <SearchInput />
+       <div className='search elements'>
+          <Input  placeholder="Search"  type='text' onChange={handleInputChange}/>
+          <Button size='small' type="search"
+           onClick={searchSubmitHandler}>{t("header.searchButton")}
+           </Button>
+       </div> 
 
           <div className='random  elements'>
             <label onClick={getRandomMovieHandler}>{t("header.random")}</label>

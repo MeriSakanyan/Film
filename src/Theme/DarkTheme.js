@@ -6,7 +6,7 @@ const dark = {
         InputBorderColor: "#f8f9fa",
         textColor: "#f8f9fa",
         switchColor: "#fe7900",
-        languageColor: "#adb5bd",
+        languageColor: "#EEEEEE",
         CarouselBgColor: "#18191a",
         CarouselArrowColor: '#eee',
         paginationColor: "#f8f9fa",

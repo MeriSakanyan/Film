@@ -10,7 +10,7 @@ function CarouselItem(film) {
 
   return (
     <Styles>
-      <div onClick={ () => {navigate('/movie/'+film.id)}}>
+      <div className='carousel_item' onClick={ () => {navigate('/movie/'+film.id)}}>
         <LazyLoadImage
         src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`} 
         alt=''

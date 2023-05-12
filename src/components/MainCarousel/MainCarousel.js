@@ -23,6 +23,7 @@ function MainCarousel() {
   
   return (
   <Styles>
+    <div className="carousel_container">
     <Slider {...mainCarouselSettings}>
       {
         films.data.results && films.data.results.map((film) => 
@@ -32,6 +33,8 @@ function MainCarousel() {
         )
       }
     </Slider>
+    
+    </div>
   </Styles>
 );
 }

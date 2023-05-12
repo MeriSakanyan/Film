@@ -4,15 +4,20 @@ export default styled.div`
         display: flex;
         justify-content: space-around;
         align-items: center;
+        
     .ant-select {
       .ant-select-selection-item {
       color: ${(props) => props.theme.colors.languageColor};
-      margin-left: 15px;
+      /* margin-left: 15px; */
       font-size: 16px;
+      font-family: Arial;
+      
     }
+
     .ant-select-arrow {
       color: ${(props) => props.theme.colors.languageColor};
-      font-size: 11px;
+      font-size: 10px;
+      height: calc(0em + 0.5rem + 1px);
     }
     }  
     .ant-select-single:not(.ant-select-customize-input) .ant-select-selector  {
@@ -21,20 +26,29 @@ export default styled.div`
       font-size: 15px;
       color: white;
     }  
-    
+/*     
     @media screen and (max-width: 991px) {
       width: 60%;
       display: flex;
       justify-content: space-between;
-    }
-    @media (max-Width:991px){
-      width: 100%;
+    } */
+    @media screen and  (max-width:991px){
+      width: 50%;
       display: flex;
       justify-content: space-between;
     }
-    @media (max-Width:991px){
-      .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
-               font-size: 20px;
-          }
-    }
+
+    /* @media screen and  (max-width:991px){
+      .left_side_responcive {
+        width: 1500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    } */
+
+    
+
+
+
 `

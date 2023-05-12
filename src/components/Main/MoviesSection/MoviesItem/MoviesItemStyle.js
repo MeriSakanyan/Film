@@ -9,7 +9,7 @@ export default styled.div`
          height: 131px;
          width: 350px;
          background-color: ${(props) => props.theme.colors.cardBgColor};
-         border: 1px solid ${(props) => props.theme.colors.cardBgColor};
+         border:  ${(props) => props.theme.colors.cardBgColor};
          width: '25%';
          text-align: 'center';
       }

@@ -10,6 +10,9 @@ const FilmLogo = styled.img.attrs(({src})  => ({
 }))`
  width: 120px;
  height: 40px;
+ @media screen and  (max-width:991px){
+      margin-left: 170px;
+    }
 `
 
 function LeftSide({isDarkThem}) {

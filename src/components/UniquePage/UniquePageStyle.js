@@ -22,7 +22,7 @@ export default styled.div`
     }
     ul li {
         color: ${(props) => props.theme.colors.DetailsDesc};
-        height: 30px;
+        height: 45px;
         padding: 8px 16px;
     }
     ul li span {
@@ -49,6 +49,18 @@ export default styled.div`
      display: flex;
      font-size: 20px;
    }
+
+   .css-dev-only-do-not-override-htwhyh {
+     width: 223px;
+     font-size: 15px;
+     text-align: center;
+     margin-top: 8px;
+    }
+   .ant-rate-star-half,
+    .ant-rate-star-full {
+      color: rgb(254, 121, 0) !important;
+    }
+
    .Movie-votes {
     color: ${(props) => props.theme.colors.DetailsAbotText};
    }
