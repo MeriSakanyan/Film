@@ -9,7 +9,6 @@ import { fetchSearch } from '../../store/slice/search/searchApi';
 import { useParams } from 'react-router-dom';
 import ErrorPage from '../ErrorPage/ErrorPage';
 
-
 function Search() {
   const { searchText } = useParams() 
   const dispatch = useDispatch();
@@ -17,7 +16,6 @@ function Search() {
   const { i18n} = useTranslation()
   const [page, setPage] = useState(1)
 
-  
   useEffect(() => {
     
     dispatch(fetchSearch({url:`${process.env.REACT_APP_BASE_URL}/search/movie?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&query=${searchText}&page=${page}`}))
@@ -27,7 +25,6 @@ function Search() {
   return (
     <Styles>
        <div className='Search_list'>
-
         {
           search.data.results && search.data.results.map((film) => 
           <div key={film.id} >
@@ -35,12 +32,13 @@ function Search() {
           </div>
           )
         }
+
         {
           !search.data.results?.length  && !search.isLoading &&
           <ErrorPage />
         }
-      
       </div>
+
       <Pagination
          defaultCurrent={1}
          total={100} 

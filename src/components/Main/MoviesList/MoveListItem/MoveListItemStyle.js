@@ -1,25 +1,25 @@
 import styled from "styled-components";
 
 export default styled.div`
-    /* display: flex;
-    flex-direction: column; */
-    /* height: 427px; */
-    width: 253px;
-
-    img {
-     height: 100%;
-     width: 233.33px;
-     transition: all .3s ease;
-    
+    width: 253.33px;
+    height: 427px;
+    .moviesItem_container {
+      width: 233.33px;
+      margin: 0 auto;
     }
-
+    img {
+     height: 335px;
+     width: 223px;
+     margin: 0 auto;
+     transition: all .3s ease;
+    }
     p {
-     color: ${(props) => props.theme.colors.MoviesNameColor};
+     color: ${(props) => props.theme.colors.moviesNameColor};
      text-align: center;
      font-size: 16px;
     }
     .css-dev-only-do-not-override-htwhyh {
-     width: 223px;
+     width: 100%;
      font-size: 15px;
      text-align: center;
      margin-top: 8px;
@@ -29,10 +29,4 @@ export default styled.div`
     .ant-rate-star-full {
       color: rgb(254, 121, 0);
     }
-
-     @media screen and (max-Width: 991px) {
-      img {
-        width: 350px
-      }
-    } 
 `

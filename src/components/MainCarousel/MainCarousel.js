@@ -10,8 +10,6 @@ import { selectCarouselFilms } from "../../store/slice/carouselFilms/carouselFil
 import { fetchCarouselFilms } from "../../store/slice/carouselFilms/carouselFilmsAPI";
 import { mainCarouselSettings } from "./MainCarouselSettings";
 
-
-
 function MainCarousel() {
   const dispatch = useDispatch();
   const films = useSelector(selectCarouselFilms);

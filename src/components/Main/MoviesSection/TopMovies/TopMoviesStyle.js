@@ -18,4 +18,14 @@ export default styled.div`
       flex-direction: column;
       justify-content: space-between;
     }
+
+    
+     @media screen and  (max-Width:991px){
+      .Top-Movies-header {
+        margin-top: 50px;
+      }
+      .Top-Movies-header {
+        width: 500px;
+      }
+    }
 `

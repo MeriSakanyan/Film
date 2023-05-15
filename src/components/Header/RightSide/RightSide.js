@@ -3,7 +3,6 @@ import Styles from './RightSideStyle';
 import { Switch,  Button, Input } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { Turn  as Hamburger } from 'hamburger-react';
-// import SearchInput from '../../SearchInput/SearchInput';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { selectMoviesList } from '../../../store/slice/moviesList/moviesListSlice';
@@ -18,10 +17,7 @@ function RightSide({toggleTheme, isDarkThem}) {
   const dispatch = useDispatch();
   const films = useSelector(selectMoviesList);
   const carouselFilms = useSelector(selectCarouselFilms);
-
-
   const [value, setvalue] = useState('')
-
 
   const searchSubmitHandler = () => {
     if(value){
@@ -37,8 +33,6 @@ function RightSide({toggleTheme, isDarkThem}) {
     setIsToggled(!isToggled);
     toggleTheme();
   }
-
-  console.log(films)
 
   const getRandomMovieHandler = () => {
     const randomMovieId = Math.floor(Math.random() * 20)
@@ -56,39 +50,35 @@ function RightSide({toggleTheme, isDarkThem}) {
           <> 
             <div className='search hamburgerelements'>
                <Input  placeholder="Search"  type='text' onChange={handleInputChange}/>
-               <Button size='small' type="search"
-                onClick={searchSubmitHandler}>{t("header.searchButton")}
+               <Button size='small' type="search" onClick={searchSubmitHandler}>{t("header.searchButton")}
                </Button>
-           </div> 
+            </div> 
 
-          <div className='random hamburgerelements'>
-            <label onClick={getRandomMovieHandler}>{t("header.random")}</label>
-          </div>
+            <div className='random hamburgerelements'>
+               <label onClick={getRandomMovieHandler}>{t("header.random")}</label>
+            </div>
 
-          <div className='switch hamburgerelements'>
-            <Switch size='small' checked={isToggled} onChange={onToggle} /> 
-            <span className='mode'>{t("header.mode")}</span>
-          </div>
-
+            <div className='switch hamburgerelements'>
+               <Switch size='small' checked={isToggled} onChange={onToggle} /> 
+               <span className='mode'>{t("header.mode")}</span>
+            </div>
           </>
          }
 
-       <div className='search elements'>
-          <Input  placeholder="Search"  type='text' onChange={handleInputChange}/>
-          <Button size='small' type="search"
-           onClick={searchSubmitHandler}>{t("header.searchButton")}
-           </Button>
-       </div> 
+            <div className='search elements'>
+               <Input  placeholder="Search"  type='text' onChange={handleInputChange}/>
+               <Button size='small' type="search" onClick={searchSubmitHandler}>{t("header.searchButton")}
+               </Button>
+            </div> 
 
-          <div className='random  elements'>
-            <label onClick={getRandomMovieHandler}>{t("header.random")}</label>
-          </div>
+            <div className='random  elements'>
+               <label onClick={getRandomMovieHandler}>{t("header.random")}</label>
+            </div>
 
-          <div className='switch elements'>
-            <Switch size='small' checked={isToggled} onChange={onToggle} />   
-            <span className='mode'>{t("header.mode")}</span>
-          </div>
-
+            <div className='switch elements'>
+               <Switch size='small' checked={isToggled} onChange={onToggle} />   
+               <span className='mode'>{t("header.mode")}</span>
+            </div>
      </Styles>
   )
 }

@@ -25,7 +25,7 @@ console.log(films);
   
   return (
   <Styles>
-    <h1 style={{color: "white"}}>Similar Movies</h1>
+    <h1>Similar Movies</h1>
     <Slider {...similarMoviesSettings}>
       {
         films?.data?.results && films?.data?.results.map((film) => 

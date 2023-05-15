@@ -26,6 +26,7 @@ function MoviesList() {
          total={5000} 
          onChange={(page) => setPage(page)}
        />
+
        <div className='MoviesList'>
            {
             filmList?.data?.results && filmList?.data?.results.map((film) => 
@@ -35,6 +36,7 @@ function MoviesList() {
             )
            }
        </div>
+       
        <Pagination
          defaultCurrent={1}
          current={page}

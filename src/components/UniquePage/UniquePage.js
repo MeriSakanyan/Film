@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Styles from './UniquePageStyle';
 import { fetchUniquePageFilm } from '../../store/slice/uniquePage/uniquePageApi';
@@ -13,17 +13,13 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 function UniquePage() {
   const dispatch = useDispatch();
   const film = useSelector(selectUniquePageFilm);
- 
+
   const { t, i18n} = useTranslation()
   const { id } = useParams() 
-  const [value, setValue] = useState(3);
-  const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
-  
-  
+
   useEffect(() => {
     dispatch(fetchUniquePageFilm({url:`${process.env.REACT_APP_BASE_URL}/movie/${id}?api_key=c90960472340983f37679878e271035a&language=${i18n.language}`}))
   }, [i18n.language, id])
-  
 
    return (
     <Styles>
@@ -52,7 +48,9 @@ function UniquePage() {
       </div>
 
      <div className='movie-rating'>
-     <Rate tooltips={desc} onChange={setValue} value={value} count={10}/>
+     <span>
+     <Rate allowHalf disabled value={film?.vote_average} count={10} />
+    </span>
         <div className='Movie-votes'>
           <p>{t("uniquePage.movieRating")} {film.data?.vote_average}</p>
           <p>{t("uniquePage.totalVotes")} {film.data?.vote_count}</p>

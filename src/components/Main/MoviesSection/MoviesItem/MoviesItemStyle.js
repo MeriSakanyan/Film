@@ -6,16 +6,13 @@ export default styled.div`
       flex-direction: column;
       .ant-card {
          display: flex;
-         height: 131px;
-         width: 350px;
          background-color: ${(props) => props.theme.colors.cardBgColor};
          border:  ${(props) => props.theme.colors.cardBgColor};
-         width: '25%';
          text-align: 'center';
       }
       img {
         height: 131px;
-        width: 87px;
+        width: 100%;
         border-radius: 0 !important;
       }
       .ant-card-bordered {
@@ -41,7 +38,6 @@ export default styled.div`
         border-radius: 50%;
         background-color: #fe7900;
         color: #EEEEEE;
-        /* text-align: center; */
         font-size: 16px;
         font-weight: 700;
         margin: -30px 20px 0 auto;
@@ -50,9 +46,20 @@ export default styled.div`
         justify-content: center;
       }
 
-     @media (max-Width:767px){
+      @media (max-Width:991px){
+        margin-top: 50px;
         .ant-card {
-         width: 509px;
+        width: 510px;
+        height: 191px;
+        margin: 0 auto;
       }
-     }
+      img {
+        height: 191px;
+        width: 100%;
+        border-radius: 0 !important;
+      }
+      .vote_average {
+        margin: 59px -98px 0px auto;
+      }
+    } 
 `

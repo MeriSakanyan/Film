@@ -18,8 +18,9 @@ function Footer() {
     <Styles>
         <iframe
         data-v-2b09c3ac="" src={"https://www.youtube.com/embed/" + video.data?.results?.[0].key}
-        title="YouTube video player" frameBorder="0" className="w-50 shadow-5 trailer-frame">
-        </iframe> 
+        title="YouTube video player" frameBorder="0" className="w-50 shadow-5 trailer-frame"
+        loading='Lazy'
+        />
         <p>Copyright © 2019 iFilm.com. All Rights Reserved.</p>
     </Styles>
   )

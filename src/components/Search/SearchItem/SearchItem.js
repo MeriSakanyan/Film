@@ -11,7 +11,6 @@ const { Meta } = Card;
 function SearchItem(film) {
     const navigate = useNavigate();
   
-
     return (
       <Styles>
         <div  onClick={ () => {navigate('/movie/'+film.id)}}>

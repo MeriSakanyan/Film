@@ -1,8 +1,6 @@
-
 export const mainCarouselSettings = {
   dots: false,
   infinite: false,
-  // speed: 500,
   slidesToShow: 8,
   slidesToScroll: 8,
   initialSlide: 0,

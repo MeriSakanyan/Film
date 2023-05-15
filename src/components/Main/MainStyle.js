@@ -4,28 +4,17 @@ export default styled.div`
       display: flex;
       justify-content: space-between;
       width: 1140px;
-      /* height: 3050px; */
       margin: 0 auto;
       margin-top: 50px;
 
-      @media scrren and  (max-Width:991px){
-      width: 1140px;
-      margin: 0 auto;
-      margin-top: 48px;
+     @media (max-Width:1124px){
+      width: 900px;
      }
 
-     @media (max-Width:767px){
+     @media (max-Width:991px){
+      width: 700px;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
-      width: 900px;
-      height: 3050px;
-      margin-left: 200px;
-      margin-top: 1800px;
-     }
-     @media (max-Width: 767px){
-      .MoviesList {
-            margin-left: 100px;
-      }
+      margin-left: 190px;
      }
 `
