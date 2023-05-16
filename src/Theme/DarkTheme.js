@@ -23,6 +23,7 @@ const dark = {
         detailsDesc: "#EEEEEE",
         detailsAboutBg: "#242526",
         detailsAbotText: "#EEEEEE",
+        starsRate: "#fff",
     },
 }
 

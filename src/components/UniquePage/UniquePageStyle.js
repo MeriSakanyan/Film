@@ -14,20 +14,24 @@ export default styled.div`
         width: 223px;
         height: 334px;
     }
-    ul {
+
+
+    .details_list {
         width: 476px;
         height: 300px;
         list-style-type: none;
         padding: 0;
     }
-    ul li {
+    .details_list li {
         color: ${(props) => props.theme.colors.detailsDesc};
         height: 45px;
         padding: 8px 16px;
     }
-    ul li span {
+    .details_list li span {
        color: ${(props) => props.theme.colors.detailText};
     }
+
+    
    .Details_bg {
        background-color: ${(props) => props.theme.colors.detailsBg};
    }
@@ -59,10 +63,25 @@ export default styled.div`
      text-align: center;
      margin-top: 8px;
     }
-   .ant-rate-star-half,
+  
+
+   .ant-rate-star-first, .ant-rate-star-second {
+    color:  ${(props) => props.theme.colors.starsRate} !important;
+   }
+
     .ant-rate-star-full {
-      color: rgb(254, 121, 0) !important;
+        .ant-rate-star-first, .ant-rate-star-second{
+            color: rgb(254, 121, 0) !important;
+        }
+        
     }
+    
+   .ant-rate-star-half {
+    .ant-rate-star-first{
+        color: rgb(254, 121, 0) !important;
+        }
+   }
+   
 
     .Movie-votes {
     color: ${(props) => props.theme.colors.detailText};

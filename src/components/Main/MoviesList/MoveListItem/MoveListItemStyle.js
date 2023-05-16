@@ -8,8 +8,8 @@ export default styled.div`
       margin: 0 auto;
     }
     img {
-     height: 335px;
-     width: 223px;
+     height: 100%;
+     width: 100%;
      margin: 0 auto;
      transition: all .3s ease;
     }
@@ -25,8 +25,19 @@ export default styled.div`
      margin-top: 8px;
     }
 
-    .ant-rate-star-half,
-    .ant-rate-star-full {
-      color: rgb(254, 121, 0);
+    .ant-rate-star-first, .ant-rate-star-second {
+     color:  ${(props) => props.theme.colors.starsRate} !important;
     }
+
+    .ant-rate-star-full {
+        .ant-rate-star-first, .ant-rate-star-second{
+            color: rgb(254, 121, 0) !important;
+        } 
+    }
+    
+    .ant-rate-star-half {
+    .ant-rate-star-first{
+        color: rgb(254, 121, 0) !important;
+        }
+   }
 `

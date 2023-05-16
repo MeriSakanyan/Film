@@ -14,7 +14,7 @@ export default styled.div`
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
-    margin-top: 200px;
+    margin-top: 50px;
     width: 100%;
     iframe {
 

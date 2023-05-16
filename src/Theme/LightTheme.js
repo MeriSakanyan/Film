@@ -23,6 +23,7 @@ const light = {
         detailsDesc: "#212529",
         detailsAboutBg: "#e1e1e1",
         detailsAbotText: "#212529",
+        starsRate: "#e1e1e1",
     },
 }
 

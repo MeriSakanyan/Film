@@ -10,10 +10,10 @@ import SimilarMovies from '../SimilarMovies/SimilarMovies';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
+
 function UniquePage() {
   const dispatch = useDispatch();
   const film = useSelector(selectUniquePageFilm);
-
   const { t, i18n} = useTranslation()
   const { id } = useParams() 
 
@@ -31,7 +31,7 @@ function UniquePage() {
            effect='blur'
            />
         </div>
-        <ul>
+        <ul className='details_list'>
             <li className='Details_bg'><span>{t("uniquePage.title")}</span> <strong>{film.data?.title}</strong></li>
             <li><span>{t("uniquePage.originalTitle")}</span> <strong>{film.data?.original_title}</strong></li>
             <li className='Details_bg'><span>{t("uniquePage.year")}</span> <strong>{film.data?.release_date}</strong></li>
@@ -49,7 +49,8 @@ function UniquePage() {
 
      <div className='movie-rating'>
      <span>
-     <Rate allowHalf disabled value={film?.vote_average} count={10} />
+      {/* <StarsRate /> */}
+     <Rate allowHalf disabled value={film?.data?.vote_average} count={10} />
     </span>
         <div className='Movie-votes'>
           <p>{t("uniquePage.movieRating")} {film.data?.vote_average}</p>

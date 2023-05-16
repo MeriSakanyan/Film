@@ -11,7 +11,7 @@ function MoveListItem(film) {
 
   return (
     <Styles>
-      <div className='moviesItem_container' onClick={ () => {navigate('/movie/'+film.id)}}>
+      <div className='moviesItem_container' onClick={ () => {navigate(`/movie/${film.id}`)}}>
         <LazyLoadImage
         src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`}
          alt=""

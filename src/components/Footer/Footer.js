@@ -5,10 +5,12 @@ import { selectMovieVideo } from '../../store/slice/movieVideo/movieVideoSlice';
 import { fetchMovieVideo } from '../../store/slice/movieVideo/movieVideoApi';
 import { useTranslation } from 'react-i18next';
 
+
 function Footer() {
   const dispatch = useDispatch();
   const video = useSelector(selectMovieVideo);
-  const { i18n } = useTranslation()
+  const { i18n } = useTranslation();
+
   
   useEffect(() => {
       dispatch(fetchMovieVideo({url:`${process.env.REACT_APP_BASE_URL}/movie/640146/videos?api_key=c90960472340983f37679878e271035a&language=${i18n.language}`}))

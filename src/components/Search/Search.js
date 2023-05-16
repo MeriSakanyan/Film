@@ -20,8 +20,7 @@ function Search() {
     
     dispatch(fetchSearch({url:`${process.env.REACT_APP_BASE_URL}/search/movie?api_key=c90960472340983f37679878e271035a&language=${i18n.language}&query=${searchText}&page=${page}`}))
   }, [i18n.language, searchText, page])
-  
-  console.log(search);
+   
   return (
     <Styles>
        <div className='Search_list'>

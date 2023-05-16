@@ -11,7 +11,8 @@ export default styled.div`
          text-align: 'center';
       }
       img {
-        height: 131px;
+        /* height: 131px; */
+        height: 100%;
         width: 100%;
         border-radius: 0 !important;
       }
@@ -46,12 +47,12 @@ export default styled.div`
         justify-content: center;
       }
 
-      @media (max-Width:991px){
+      @media screen and (max-Width:991px){
         margin-top: 50px;
+        margin-left: 200px;
         .ant-card {
         width: 510px;
         height: 191px;
-        margin: 0 auto;
       }
       img {
         height: 191px;

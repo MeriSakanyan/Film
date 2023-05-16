@@ -76,15 +76,14 @@ export default styled.div`
          color: rgb(254, 121, 0);       
       }
 
-      
 
-       @media (min-Width:992px){
+
+       @media (min-Width:1023px){
             .hamburger-react {
                  display: none;
              }       
       } 
-
-      @media screen and  (max-Width:991px){
+      @media screen and  (max-Width:1023px){
             .elements {
                display: none;
             } 

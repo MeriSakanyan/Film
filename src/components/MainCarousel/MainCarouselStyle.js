@@ -16,6 +16,6 @@ export default styled.div`
       } 
 
       @media screen and (max-Width:767px){
-         width: 900px; 
+         width: 1000px; 
       } 
 `

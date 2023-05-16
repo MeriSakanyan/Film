@@ -17,7 +17,7 @@ function Cinema() {
 
   return (
     <Styles>
-        <h1>{t('mainPage.cinema')}</h1>
+        <h1 className='cinema'>{t('mainPage.cinema')}</h1>
         <div className='Top_Movies_main'>
             {
               cinemaMovies?.data?.results  && cinemaMovies?.data?.results.slice(0, 10).map((film) => 

@@ -40,6 +40,16 @@ export default styled.div`
           color: ${(props) => props.theme.colors.paginationEllipsisColor} !important;
        }
 
+       .ant-rate-star-first, .ant-rate-star-second {
+         color:  white;
+      }
+
+      .ant-rate-star-full {
+        .ant-rate-star-first, .ant-rate-star-second{
+            color: rgb(254, 121, 0) !important;
+        }
+       }
+
       .ant-rate-star-half,
       .ant-rate-star-full {
          color: rgb(254, 121, 0);

@@ -38,13 +38,14 @@ export default styled.div`
         }
 
         
-        @media scrren and (max-Width:991px){
+        @media screen and (max-Width:991px){
           .ant-pagination {
             margin-right: 20px;
-            padding-right: 150px;
+            padding-right: 70px;
           }
         }
         @media (max-Width:1124px){
           width: 600px;
+          margin: 0 auto;
         }
 `

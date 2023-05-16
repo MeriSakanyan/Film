@@ -20,12 +20,15 @@ export default styled.div`
     }
 
     
-     @media screen and  (max-Width:991px){
+     @media screen and  (max-Width:1124px){
       .Top-Movies-header {
         margin-top: 50px;
       }
+    }
+      @media screen and  (max-Width:991px){
       .Top-Movies-header {
         width: 500px;
+        margin-left: 200px;
       }
     }
 `
