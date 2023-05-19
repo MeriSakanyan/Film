@@ -3,7 +3,6 @@ import styled from "styled-components";
 export default styled.div`
      .carousel_item {
        padding: 16px !important;
-       /* margin: 0 auto; */
      }
      img {
          height: 100%;
@@ -18,8 +17,9 @@ export default styled.div`
 
      @media screen and (max-Width:767px){
        img {
-         height: 613px;
-         width: 428px;
+         height: 451px;
+         width: 301px;
+         
        }
       } 
 `

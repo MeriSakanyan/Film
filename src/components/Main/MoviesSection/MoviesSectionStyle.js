@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export default styled.div`
-     display: flex;
-     flex-direction: column;
-     width: 350px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
 `
+
+

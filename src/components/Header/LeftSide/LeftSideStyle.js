@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export default styled.div`
     display: flex;
-    /* justify-content: space-around; */
     align-items: center;
     .ant-select {
       .ant-select-selection-item {
@@ -22,9 +21,10 @@ export default styled.div`
       font-size: 15px;
       color: white;
     }  
-    @media screen and  (max-width:991px){
-      width: 50%;
+    @media screen and  (max-width:1060px){
+      width: 100%;
       display: flex;
-      justify-content: space-between;
+      
+      justify-content: space-evenly
     }
 `

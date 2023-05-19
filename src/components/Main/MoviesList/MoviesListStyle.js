@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export default styled.div`
         .MoviesList {
-           display: flex;
-           flex-wrap: wrap;
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
            margin-top: 24px;
+         
         }
         .ant-pagination {
            text-align: center;
@@ -38,7 +39,10 @@ export default styled.div`
         }
 
         
-        @media screen and (max-Width:991px){
+        @media screen and (max-Width:1124px){
+         .MoviesList {
+           grid-template-columns: 1fr 1fr ; 
+        }
           .ant-pagination {
             margin-right: 20px;
             padding-right: 70px;

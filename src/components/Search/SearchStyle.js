@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export default styled.div`
+      width: 80%;
       margin: 0 auto;
       .Search_list {
         display: flex;
@@ -54,4 +55,7 @@ export default styled.div`
       .ant-rate-star-full {
          color: rgb(254, 121, 0);
       }
+           @media screen and (max-width: 1124px) {
+        width: 600px
+     }      
 `

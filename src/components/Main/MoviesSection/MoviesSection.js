@@ -1,8 +1,8 @@
 import React from 'react';
 import Styles from './MoviesSectionStyle';
+import { useLocation } from 'react-router-dom';
 import TopMovies from './TopMovies/TopMovies';
 import Cinema from './Cinema/Cinema';
-import { useLocation } from 'react-router-dom';
 
 function MoviesSection() {
   const location = useLocation();

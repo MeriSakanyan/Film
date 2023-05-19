@@ -76,27 +76,21 @@ export default styled.div`
          color: rgb(254, 121, 0);       
       }
 
-
-
-       @media (min-Width:1023px){
+       @media (min-Width:1060px){
             .hamburger-react {
                  display: none;
              }       
       } 
-      @media screen and  (max-Width:1023px){
+
+      @media screen and  (max-Width:1060px){
             .elements {
                display: none;
-            } 
-            .hamburgerelements{
-               display: flex;
-               flex-direction: column;
-               align-items: flex-end;
-               align-content: flex-end;
-               float: right;
-            } 
-            .hamburger-react {
-                margin-left: 270px;
             }
-        }
+
+      @media (max-Width:1060px){
+            flex-direction: column;
+            align-items: flex-end;
+      }
+ }
 `
 

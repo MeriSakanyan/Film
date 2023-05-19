@@ -7,9 +7,9 @@ import { useDispatch, useSelector } from "react-redux";
 import  {useTranslation}  from 'react-i18next';
 import { selectSimilarMovies } from "../../store/slice/similarMovies/similarMoviesSlice";
 import { fetchSimilarMovies } from "../../store/slice/similarMovies/similarMoviesApi"; 
-import CarouselItem from "../../components/MainCarousel/CarouselItem/CarouselItem"
 import { similarMoviesSettings } from "../MainCarousel/MainCarouselSettings";
 import { useParams } from "react-router-dom";
+import CarouselItem from "../../components/MainCarousel/CarouselItem/CarouselItem";
 
 function SimilarMovies() {
   const dispatch = useDispatch();

@@ -22,6 +22,7 @@ function RightSide({toggleTheme, isDarkThem}) {
   const searchSubmitHandler = () => {
     if(value){
       navigate('/search/'+value)
+      setvalue('')
     }
   }
   
@@ -49,7 +50,7 @@ function RightSide({toggleTheme, isDarkThem}) {
          {isOpen && 
           <> 
             <div className='search hamburgerelements'>
-               <Input  placeholder="Search"  type='text' onChange={handleInputChange}/>
+               <Input  value={value} placeholder="Search"  type='text' onChange={handleInputChange}/>
                <Button size='small' type="search" onClick={searchSubmitHandler}>{t("header.searchButton")}
                </Button>
             </div> 
@@ -66,7 +67,7 @@ function RightSide({toggleTheme, isDarkThem}) {
          }
 
             <div className='search elements'>
-               <Input  placeholder="Search"  type='text' onChange={handleInputChange}/>
+               <Input value={value}  placeholder="Search"  type='text' onChange={handleInputChange}/>
                <Button size='small' type="search" onClick={searchSubmitHandler}>{t("header.searchButton")}
                </Button>
             </div> 

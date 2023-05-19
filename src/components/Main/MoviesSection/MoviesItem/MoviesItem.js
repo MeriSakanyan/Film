@@ -6,16 +6,10 @@ import { useTranslation } from 'react-i18next';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-
-const { Meta } = Card;
-
 function MoviesItem(film) {
   const navigate = useNavigate()
-  const { t, i18n} = useTranslation()
+  const { t } = useTranslation()
 
-
-
-  
   return (
     <Styles>
       <div  onClick={ () => {navigate('/movie/'+film.id)}}>
@@ -23,7 +17,7 @@ function MoviesItem(film) {
         hoverable
         cover={<LazyLoadImage
         src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`}
-        alt=""
+        alt="Image"
         effect='blur'
         />}
         >

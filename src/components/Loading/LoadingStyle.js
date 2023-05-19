@@ -4,8 +4,9 @@ export default styled.div`
       width: 100px;
       height: 100px;
       background-color: white;
-      margin: 0 auto;
-      margin-top: 400px;
+      position: fixed; 
+      top: 50%;
+      left: 50%;
       .lds-dual-ring {
         display: inline-block;
         width: 80px;

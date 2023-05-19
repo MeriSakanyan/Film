@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Styles from './TopMoviesStyle';
-import MoviesItem from '../MoviesItem/MoviesItem';
 import { SyncOutlined } from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectTopMovies } from '../../../../store/slice/topMovies/topMoviesSlice';
 import { useTranslation } from 'react-i18next';
 import { fetchTopMovies } from '../../../../store/slice/topMovies/topMoviesApi';
+import MoviesItem from '../MoviesItem/MoviesItem';
 
 function TopMovies() {
   const dispatch = useDispatch();

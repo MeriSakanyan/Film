@@ -14,7 +14,7 @@ function MoveListItem(film) {
       <div className='moviesItem_container' onClick={ () => {navigate(`/movie/${film.id}`)}}>
         <LazyLoadImage
         src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`}
-         alt=""
+         alt="Image"
          placeholder={<Spinner />}
          />
         <Rate allowHalf disabled value={film?.vote_average} count={10} />

@@ -8,6 +8,7 @@ const dark = {
         switchColor: "#fe7900",
         languageColor: "#EEEEEE",
         CarouselBgColor: "#18191a",
+        SimilarMoviesBgColor: "#242526",
         CarouselArrowColor: '#eee',
         paginationColor: "#f8f9fa",
         paginationArrowColor: "#f8f9fa",

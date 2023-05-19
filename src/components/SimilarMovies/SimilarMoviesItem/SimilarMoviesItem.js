@@ -1,4 +1,3 @@
-
 import React from 'react'
 import Styles from './SimilarMoviesItemStyle'
 import {useNavigate} from 'react-router-dom';
@@ -14,7 +13,7 @@ function SimilarMoviesItem(film) {
       <div onClick={ () => {navigate('/movie/'+film.id)}}>
         <LazyLoadImage
         src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`}
-        alt=""
+        alt="Image"
         placeholder={<Spinner />}
         />
         <p>{film?.title}</p>

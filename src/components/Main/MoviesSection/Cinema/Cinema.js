@@ -6,6 +6,7 @@ import {selectCinemaMovies} from '../../../../store/slice/cinemaMovies/cinemaMov
 import {fetchCinemaMovies} from '../../../../store/slice/cinemaMovies/cinemaMoviesAPI';
 import MoviesItem from '../MoviesItem/MoviesItem';
 
+
 function Cinema() {
   const dispatch = useDispatch();
   const cinemaMovies = useSelector(selectCinemaMovies);

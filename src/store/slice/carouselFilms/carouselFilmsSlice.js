@@ -7,6 +7,7 @@ const carouselFilmsSlice = createSlice({
         isLoading: true,
         data: [],
         isError: false,
+        firstFilm: null
         },
     extraReducers: (builder) => {
         builder.addCase(fetchCarouselFilms.pending, (state, action) => {
@@ -15,6 +16,7 @@ const carouselFilmsSlice = createSlice({
         .addCase(fetchCarouselFilms.fulfilled, (state, action) => {
         state.isLoading = false;
         state.data = action.payload;
+        state.firstFilm = {id: action.payload.results[0].id, image: action.payload.results[0].backdrop_path}
        })
        .addCase(fetchCarouselFilms.rejected, (state, action) => {
         state.isLoading = false;

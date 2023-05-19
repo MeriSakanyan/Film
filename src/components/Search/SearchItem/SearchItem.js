@@ -18,7 +18,7 @@ function SearchItem(film) {
           hoverable
           cover={<LazyLoadImage
                  src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film?.poster_path}`}
-                 alt=''
+                 alt='Image'
                  effect='blur'
                   />}
         >

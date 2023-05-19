@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export default styled.div`
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) center no-repeat,
-    url("https://image.tmdb.org/t/p/original/8YFL5QQVPy3AgrEQxNYVSgiPEbe.jpg") center no-repeat, rebeccapurple;
+export default styled.div` 
+    background: ${(props) => (`linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) center no-repeat,
+    ${props?.src && `url("https://image.tmdb.org/t/p/original${props?.src}")`} center no-repeat, rebeccapurple`)};
     border: 1px solid #000;
     min-height: 650px;
     background-position: 50%;
@@ -14,7 +14,8 @@ export default styled.div`
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
-    margin-top: 50px;
+
+    margin: 50px auto;
     width: 100%;
     iframe {
 
@@ -36,6 +37,6 @@ export default styled.div`
     }
 
     @media screen and  (max-Width:991px){
-        width: 1000px;
+        width: 100%;
      }
 `

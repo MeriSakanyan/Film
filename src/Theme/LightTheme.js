@@ -8,6 +8,7 @@ const light = {
         switchColor: "#adb5bd",
         languageColor: "#adb5bd",
         CarouselBgColor: "#343a40",
+        SimilarMoviesBgColor: "#343a40",
         CarouselArrowColor: '#fe7900',
         paginationColor: "#fe7900",
         paginationArrowColor: "#fe7900",

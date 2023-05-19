@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import Styles from './SearchStyle'
-import SearchItem from './SearchItem/SearchItem'
+import React, { useEffect, useState } from 'react';
+import Styles from './SearchStyle';
 import { Pagination } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -8,6 +7,7 @@ import { selectSearch } from '../../store/slice/search/searchSlice';
 import { fetchSearch } from '../../store/slice/search/searchApi';
 import { useParams } from 'react-router-dom';
 import ErrorPage from '../ErrorPage/ErrorPage';
+import SearchItem from './SearchItem/SearchItem';
 
 function Search() {
   const { searchText } = useParams() 

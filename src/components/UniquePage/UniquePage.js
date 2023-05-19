@@ -6,10 +6,9 @@ import { selectUniquePageFilm } from '../../store/slice/uniquePage/uniquePageSli
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { Rate } from 'antd';
-import SimilarMovies from '../SimilarMovies/SimilarMovies';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-
+import SimilarMovies from '../SimilarMovies/SimilarMovies';
 
 function UniquePage() {
   const dispatch = useDispatch();
@@ -27,7 +26,7 @@ function UniquePage() {
         <div>
            <LazyLoadImage
            src = {`${process.env.REACT_APP_IMAGE_BASE_URL}/${film.data?.poster_path}`}
-           alt=""
+           alt="Image"
            effect='blur'
            />
         </div>
@@ -48,13 +47,10 @@ function UniquePage() {
       </div>
 
      <div className='movie-rating'>
-     <span>
-      {/* <StarsRate /> */}
      <Rate allowHalf disabled value={film?.data?.vote_average} count={10} />
-    </span>
         <div className='Movie-votes'>
-          <p>{t("uniquePage.movieRating")} {film.data?.vote_average}</p>
-          <p>{t("uniquePage.totalVotes")} {film.data?.vote_count}</p>
+          <p>{t("uniquePage.movieRating")} <strong>{film.data?.vote_average}</strong></p>
+          <p>{t("uniquePage.totalVotes")} <strong>{film.data?.vote_count}</strong></p>
         </div>
      </div>
      

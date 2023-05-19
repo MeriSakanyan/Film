@@ -25,8 +25,6 @@ export const mainCarouselSettings = {
   ]
 };
 
-
-  
 export const similarMoviesSettings = {
   dots: false,
   infinite: false,
@@ -36,7 +34,7 @@ export const similarMoviesSettings = {
   initialSlide: 0,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 767,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -44,20 +42,5 @@ export const similarMoviesSettings = {
         dots: false
       }
     },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
   ]
 };

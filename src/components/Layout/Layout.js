@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Outlet } from "react-router-dom"
+import {ThemeProvider}  from 'styled-components';
+import {dark, light} from '../../Theme/Theme';
 import Header from '../Header/Header';
 import MainCarousel from '../MainCarousel/MainCarousel';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
-import GlobalStyles from '../../styles/GlobalStyles';
-import {ThemeProvider}  from 'styled-components';
-import {dark, light} from '../../Theme/Theme'
 import MoviesSection from '../Main/MoviesSection/MoviesSection';
+import GlobalStyles from '../../styles/GlobalStyles';
 
 function Layout({hasSidebar = true}) {
     const [theme, setTheme] = useState("dark");
